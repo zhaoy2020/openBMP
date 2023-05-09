@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OpenBMP</class>
+ <widget class="QMainWindow" name="OpenBMP">
+  <property name="windowTitle">
+   <string>OpenBMP</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>371</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>毛泽东</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>495</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuBlast">
+    <property name="title">
+     <string>Blast</string>
+    </property>
+    <addaction name="actionLocal_Blast_GUI"/>
+   </widget>
+   <widget class="QMenu" name="menuGO">
+    <property name="title">
+     <string>GO</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuKEGG">
+    <property name="title">
+     <string>KEGG</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuCOG">
+    <property name="title">
+     <string>COG</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuOthers">
+    <property name="title">
+     <string>Others</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuGames">
+    <property name="title">
+     <string>Games</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAboout"/>
+    <addaction name="actionUpdate"/>
+   </widget>
+   <addaction name="menuBlast"/>
+   <addaction name="menuGO"/>
+   <addaction name="menuKEGG"/>
+   <addaction name="menuCOG"/>
+   <addaction name="menuOthers"/>
+   <addaction name="menuGames"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAboout">
+   <property name="text">
+    <string>Aboout</string>
+   </property>
+  </action>
+  <action name="actionUpdate">
+   <property name="text">
+    <string>Update</string>
+   </property>
+  </action>
+  <action name="actionLocal_Blast_GUI">
+   <property name="text">
+    <string>Local Blast GUI</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

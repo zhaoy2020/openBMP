@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2023-05-08T12:12:25
+# Project created by QtCreator 2023-05-09T16:47:42
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = ColonyCounter
+TARGET = openBMP
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -26,13 +26,13 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        MainWindow.cpp
+        OpenBMP.cpp
 
 HEADERS += \
-        MainWindow.h
+        OpenBMP.h
 
 FORMS += \
-        MainWindow.ui
+        OpenBMP.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
