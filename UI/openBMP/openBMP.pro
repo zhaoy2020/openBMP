@@ -26,13 +26,16 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        OpenBMP.cpp
+        OpenBMP.cpp \
+    LocalBlastGUI.cpp
 
 HEADERS += \
-        OpenBMP.h
+        OpenBMP.h \
+    LocalBlastGUI.h
 
 FORMS += \
-        OpenBMP.ui
+        OpenBMP.ui \
+    LocalBlastGUI.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
