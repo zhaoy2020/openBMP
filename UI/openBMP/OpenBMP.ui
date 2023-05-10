@@ -2,6 +2,14 @@
 <ui version="4.0">
  <class>OpenBMP</class>
  <widget class="QMainWindow" name="OpenBMP">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>300</height>
+   </rect>
+  </property>
   <property name="windowTitle">
    <string>OpenBMP</string>
   </property>
@@ -10,13 +18,16 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>0</y>
-      <width>371</width>
-      <height>261</height>
+      <y>10</y>
+      <width>450</width>
+      <height>250</height>
      </rect>
     </property>
     <property name="text">
-     <string>毛泽东</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;北国风光，千里冰封，万里雪飘。&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;望长城内外，惟余莽莽；&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;大河上下，顿失滔滔。&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;山舞银蛇，原驰蜡象，欲与天公试比高。&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;须晴日，看红装素裹，分外妖娆。&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;江山如此多娇，引无数英雄竞折腰。&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;惜秦皇汉武，略输文采；&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;唐宗宋祖，稍逊风骚。&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;一代天骄，成吉思汗，只识弯弓射大雕。&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;俱往矣，数风流人物，还看今朝。&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;--毛泽东&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
@@ -25,7 +36,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>495</width>
+     <width>500</width>
      <height>17</height>
     </rect>
    </property>

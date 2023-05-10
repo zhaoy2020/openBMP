@@ -14,14 +14,16 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_OpenBMP(object):
     def setupUi(self, OpenBMP):
         OpenBMP.setObjectName("OpenBMP")
+        OpenBMP.resize(500, 300)
         self.centralWidget = QtWidgets.QWidget(OpenBMP)
         self.centralWidget.setObjectName("centralWidget")
         self.label = QtWidgets.QLabel(self.centralWidget)
-        self.label.setGeometry(QtCore.QRect(10, 0, 371, 261))
+        self.label.setGeometry(QtCore.QRect(10, 10, 450, 250))
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         OpenBMP.setCentralWidget(self.centralWidget)
         self.menuBar = QtWidgets.QMenuBar(OpenBMP)
-        self.menuBar.setGeometry(QtCore.QRect(0, 0, 495, 17))
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 500, 17))
         self.menuBar.setObjectName("menuBar")
         self.menuBlast = QtWidgets.QMenu(self.menuBar)
         self.menuBlast.setObjectName("menuBlast")
@@ -67,7 +69,7 @@ class Ui_OpenBMP(object):
     def retranslateUi(self, OpenBMP):
         _translate = QtCore.QCoreApplication.translate
         OpenBMP.setWindowTitle(_translate("OpenBMP", "OpenBMP"))
-        self.label.setText(_translate("OpenBMP", "毛泽东"))
+        self.label.setText(_translate("OpenBMP", "<html><head/><body><p align=\"center\"><span style=\" font-size:6pt;\">北国风光，千里冰封，万里雪飘。</span></p><p align=\"center\"><span style=\" font-size:6pt;\">望长城内外，惟余莽莽；</span></p><p align=\"center\"><span style=\" font-size:6pt;\">大河上下，顿失滔滔。</span></p><p align=\"center\"><span style=\" font-size:6pt;\">山舞银蛇，原驰蜡象，欲与天公试比高。</span></p><p align=\"center\"><span style=\" font-size:6pt;\">须晴日，看红装素裹，分外妖娆。</span></p><p align=\"center\"><span style=\" font-size:6pt;\">江山如此多娇，引无数英雄竞折腰。</span></p><p align=\"center\"><span style=\" font-size:6pt;\">惜秦皇汉武，略输文采；</span></p><p align=\"center\"><span style=\" font-size:6pt;\">唐宗宋祖，稍逊风骚。</span></p><p align=\"center\"><span style=\" font-size:6pt;\">一代天骄，成吉思汗，只识弯弓射大雕。</span></p><p align=\"center\"><span style=\" font-size:6pt;\">俱往矣，数风流人物，还看今朝。</span></p><p align=\"center\"><span style=\" font-size:6pt;\">--毛泽东</span></p></body></html>"))
         self.menuBlast.setTitle(_translate("OpenBMP", "Blast"))
         self.menuGO.setTitle(_translate("OpenBMP", "GO"))
         self.menuKEGG.setTitle(_translate("OpenBMP", "KEGG"))
