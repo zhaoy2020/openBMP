@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>images/example.png</file>
+        <file>images/example.jpg</file>
+        <file>images/citation.svg</file>
+        <file>images/Update.svg</file>
+        <file>images/bacteria.svg</file>
+    </qresource>
+</RCC>
