@@ -1,0 +1,50 @@
+AAM01497_1	AAM01497_1	0	Glutamate-1-semialdehyde aminotransferase [Methanopyrus kandleri AV19]	0.0	862	100.000	100	430	0	0	1	430	1	430
+AAM04025_1	AAM04025_1	0	glutamate-1-semialdehyde 2,1-aminomutase [Methanosarcina acetivorans C2A]	0.0	867	100.000	100	424	0	0	1	424	1	424
+ABK77793_1	ABK77793_1	0	glutamate-1-semialdehyde aminotransferase [Cenarchaeum symbiosum A]	0.0	885	100.000	100	434	0	0	1	434	1	434
+ABK77980_1	ABK77980_1	0	glutamate-1-semialdehyde aminotransferase [Cenarchaeum symbiosum A]	0.0	919	100.000	100	456	0	0	1	456	1	456
+ABX04500_1	ABX04500_1	0	amino acid adenylation domain [Herpetosiphon aurantiacus DSM 785]	0.0	6293	100.000	100	3099	0	0	1	3099	1	3099
+ABX05793_1	ABX05793_1	0	aminotransferase class-III [Herpetosiphon aurantiacus DSM 785]	0.0	886	100.000	100	430	0	0	1	430	1	430
+ABX06187_1	ABX06187_1	0	glutamate-1-semialdehyde-2,1-aminomutase [Herpetosiphon aurantiacus DSM 785]	0.0	874	100.000	100	429	0	0	1	429	1	429
+ABX12048_1	ABX12048_1	0	aminotransferase class-III [Nitrosopumilus maritimus SCM1]	0.0	918	100.000	100	442	0	0	1	442	1	442
+ABX12386_1	ABX12386_1	0	glutamate-1-semialdehyde-2,1-aminomutase [Nitrosopumilus maritimus SCM1]	0.0	866	100.000	100	424	0	0	1	424	1	424
+ABX12913_1	ABX12913_1	0	aminotransferase class-III [Nitrosopumilus maritimus SCM1]	0.0	889	100.000	100	435	0	0	1	435	1	435
+ACR42564_1	ACR42564_1	0	glutamate-1-semialdehyde-2,1-aminomutase [Sulfolobus islandicus M.16.4]	0.0	872	100.000	100	426	0	0	1	426	1	426
+ADB38057_1	ADB38057_1	0	glutamate-1-semialdehyde-2,1-aminomutase [Spirosoma linguale DSM 74]	0.0	927	100.000	100	451	0	0	1	451	1	451
+ADB42848_1	ADB42848_1	0	amino acid adenylation domain protein (plasmid) [Spirosoma linguale DSM 74]	0.0	4664	100.000	100	2273	0	0	1	2273	1	2273
+ADM28497_1	ADM28497_1	0	glutamate-1-semialdehyde 2,1-aminomutase [Ignisphaera aggregans DSM 17230]	0.0	930	100.000	100	453	0	0	1	453	1	453
+AEG15095_1	AEG15095_1	0	Glutamate-1-semialdehyde 2,1-aminomutase [Desulfotomaculum kuznetsovii DSM 6115]	0.0	868	100.000	100	430	0	0	1	430	1	430
+AEI46983_1	AEI46983_1	0	Glutamate-1-semialdehyde 2,1-aminomutase [Runella slithyformis DSM 19594]	0.0	882	100.000	100	429	0	0	1	429	1	429
+AEJ38417_1	AEJ38417_1	0	glutamate-1-semialdehyde-2,1-aminomutase [Sulfobacillus acidophilus TPY]	0.0	863	100.000	100	431	0	0	1	431	1	431
+AEJ39662_1	AEJ39662_1	0	glutamate-1-semialdehyde aminotransferase [Sulfobacillus acidophilus TPY]	0.0	852	100.000	100	423	0	0	1	423	1	423
+AEJ41149_1	AEJ41149_1	0	hypothetical protein TPY_2991 [Sulfobacillus acidophilus TPY]	0.0	923	100.000	100	449	0	0	1	449	1	449
+AFK01975_1	AFK01975_1	0	Glutamate-1-semialdehyde 2,1-aminomutase [Emticicia oligotrophica DSM 17448]	0.0	879	100.000	100	428	0	0	1	428	1	428
+AFS80402_1	AFS80402_1	0	glutamate-1-semialdehyde-2,1-aminomutase [Candidatus Nitrosopumilus koreensis AR1]	0.0	867	100.000	100	425	0	0	1	425	1	425
+AFS81017_1	AFS81017_1	0	class III aminotransferase [Candidatus Nitrosopumilus koreensis AR1]	0.0	890	100.000	100	433	0	0	1	433	1	433
+AFU58225_1	AFU58225_1	0	glutamate-1-semialdehyde 2,1-aminomutase [Candidatus Nitrososphaera gargensis Ga9.2]	0.0	918	100.000	100	442	0	0	1	442	1	442
+AFU59535_1	AFU59535_1	0	glutamate-1-semialdehyde 2,1-aminomutase [Candidatus Nitrososphaera gargensis Ga9.2]	0.0	872	100.000	100	425	0	0	1	425	1	425
+AFU60268_1	AFU60268_1	0	glutamate-1-semialdehyde 2,1-aminomutase [Candidatus Nitrososphaera gargensis Ga9.2]	0.0	531	100.000	100	259	0	0	1	259	1	259
+AFU60269_1	AFU60269_1	0	glutamate-1-semialdehyde 2,1-aminomutase [Candidatus Nitrososphaera gargensis Ga9.2]	2.13e-113	310	100.000	100	148	0	0	1	148	1	148
+AFY93626_1	AFY93626_1	0	glutamate-1-semialdehyde-2,1-aminomutase [Chamaesiphon minutus PCC 6605]	0.0	889	100.000	100	433	0	0	1	433	1	433
+AFY93865_1	AFY93865_1	0	amino acid adenylation enzyme/thioester reductase family protein [Chamaesiphon minutus PCC 6605]	0.0	5420	100.000	100	2636	0	0	1	2636	1	2636
+AFZ23391_1	AFZ23391_1	0	glutamate-1-semialdehyde 2,1-aminomutase [Cylindrospermum stagnale PCC 7417]	0.0	884	100.000	100	432	0	0	1	432	1	432
+AFZ28245_1	AFZ28245_1	0	amino acid adenylation enzyme/thioester reductase family protein (plasmid) [Cylindrospermum stagnale PCC 7417]	0.0	5657	100.000	100	2736	0	0	1	2736	1	2736
+AGB17647_1	AGB17647_1	0	glutamate-1-semialdehyde aminotransferase [Halovivax ruber XH-70]	0.0	867	100.000	100	424	0	0	1	424	1	424
+AHX13665_1	AHX13665_1	0	thioester reductase [Dyella jiangningensis]	0.0	4913	100.000	100	2425	0	0	1	2425	1	2425
+AHX15717_1	AHX15717_1	0	glutamate-1-semialdehyde aminotransferase [Dyella jiangningensis]	0.0	877	100.000	100	428	0	0	1	428	1	428
+AJP49108_1	AJP49108_1	0	glutamate-1-semialdehyde aminotransferase [Rugosibacter aromaticivorans]	0.0	858	100.000	100	427	0	0	1	427	1	427
+AKU98435_1	AKU98435_1	0	Malonyl CoA-acyl carrier protein transacylase [Labilithrix luteola]	0.0	8579	100.000	100	4320	0	0	1	4320	1	4320
+AKU99262_1	AKU99262_1	0	Glutamate-1-semialdehyde aminotransferase [Labilithrix luteola]	2.90e-43	126	100.000	100	63	0	0	1	63	1	63
+AKU99263_1	AKU99263_1	0	Glutamate-1-semialdehyde aminotransferase [Labilithrix luteola]	0.0	733	100.000	100	362	0	0	1	362	1	362
+ALI35475_1	ALI35475_1	0	Glutamate-1-semialdehyde 2,1-aminomutase [Candidatus Nitrocosmicus oleophilus]	0.0	885	100.000	100	432	0	0	1	432	1	432
+ALI36467_1	ALI36467_1	0	Glutamate-1-semialdehyde 2,1-aminomutase [Candidatus Nitrocosmicus oleophilus]	0.0	911	100.000	100	444	0	0	1	444	1	444
+ALM10308_1	ALM10308_1	0	glutamate-1-semialdehyde 2,1-aminomutase [Candidatus Peribacter riflensis]	0.0	902	100.000	100	436	0	0	1	436	1	436
+ALP53206_1	ALP53206_1	0	glutamate-1-semialdehyde aminotransferase [Candidatus Tenderia electrophaga]	0.0	1400	100.000	100	675	0	0	1	675	1	675
+ALP54210_1	ALP54210_1	0	glutamate-1-semialdehyde aminotransferase [Candidatus Tenderia electrophaga]	0.0	875	100.000	100	426	0	0	1	426	1	426
+APR83069_1	APR83069_1	0	Glutamate-1-semialdehyde aminotransferase [Minicystis rosea]	0.0	923	100.000	100	446	0	0	1	446	1	446
+APR84366_1	APR84366_1	0	Glutamate-1-semialdehyde aminotransferase [Minicystis rosea]	0.0	855	100.000	100	425	0	0	1	425	1	425
+BAA81141_2	BAA81141_2	0	glutamate-1-semialdehyde aminotransferase [Aeropyrum pernix K1]	0.0	870	100.000	100	430	0	0	1	430	1	430
+BAA81311_2	BAA81311_2	0	glutamate-1-semialdehyde aminotransferase [Aeropyrum pernix K1]	0.0	852	100.000	100	429	0	0	1	429	1	429
+BAF59160_1	BAF59160_1	0	glutamate-1-semialdehyde aminotransferase [Pelotomaculum thermopropionicum SI]	0.0	877	100.000	100	434	0	0	1	434	1	434
+BAJ50901_1	BAJ50901_1	0	glutamate-1-semialdehyde-2,1-aminomutase [Candidatus Caldiarchaeum subterraneum]	0.0	957	100.000	100	462	0	0	1	462	1	462
+BAJ50909_1	BAJ50909_1	0	glutamate-1-semialdehyde-2,1-aminomutase [Candidatus Caldiarchaeum subterraneum]	0.0	904	100.000	100	445	0	0	1	445	1	445
+BAJ51248_1	BAJ51248_1	0	glutamate-1-semialdehyde-2,1-aminomutase [Candidatus Caldiarchaeum subterraneum]	0.0	863	100.000	100	425	0	0	1	425	1	425

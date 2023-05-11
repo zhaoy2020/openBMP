@@ -21,6 +21,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTabWidget>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -42,10 +43,11 @@ public:
     QAction *actionAbout;
     QWidget *centralWidget;
     QVBoxLayout *verticalLayout_4;
-    QFrame *frame;
+    QTabWidget *tabWidget;
+    QWidget *tabWidgetPage1;
     QVBoxLayout *verticalLayout_3;
     QVBoxLayout *verticalLayout;
-    QFrame *frame1;
+    QFrame *frame;
     QVBoxLayout *verticalLayout_2;
     QLabel *label;
     QFrame *frame_2;
@@ -68,7 +70,7 @@ public:
     {
         if (OpenBMP->objectName().isEmpty())
             OpenBMP->setObjectName(QString::fromUtf8("OpenBMP"));
-        OpenBMP->resize(536, 449);
+        OpenBMP->resize(374, 443);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/icons/images/bacteria.svg"), QSize(), QIcon::Normal, QIcon::On);
         OpenBMP->setWindowIcon(icon);
@@ -103,38 +105,42 @@ public:
         verticalLayout_4->setSpacing(6);
         verticalLayout_4->setContentsMargins(11, 11, 11, 11);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
-        frame = new QFrame(centralWidget);
-        frame->setObjectName(QString::fromUtf8("frame"));
-        verticalLayout_3 = new QVBoxLayout(frame);
+        tabWidget = new QTabWidget(centralWidget);
+        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
+        tabWidget->setDocumentMode(true);
+        tabWidget->setTabsClosable(true);
+        tabWidgetPage1 = new QWidget();
+        tabWidgetPage1->setObjectName(QString::fromUtf8("tabWidgetPage1"));
+        verticalLayout_3 = new QVBoxLayout(tabWidgetPage1);
         verticalLayout_3->setSpacing(6);
         verticalLayout_3->setContentsMargins(11, 11, 11, 11);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         verticalLayout = new QVBoxLayout();
         verticalLayout->setSpacing(6);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        frame1 = new QFrame(frame);
-        frame1->setObjectName(QString::fromUtf8("frame1"));
-        frame1->setEnabled(true);
+        frame = new QFrame(tabWidgetPage1);
+        frame->setObjectName(QString::fromUtf8("frame"));
+        frame->setEnabled(true);
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(frame1->sizePolicy().hasHeightForWidth());
-        frame1->setSizePolicy(sizePolicy1);
-        frame1->setFrameShape(QFrame::StyledPanel);
-        frame1->setFrameShadow(QFrame::Raised);
-        verticalLayout_2 = new QVBoxLayout(frame1);
+        sizePolicy1.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
+        frame->setSizePolicy(sizePolicy1);
+        frame->setFrameShape(QFrame::StyledPanel);
+        frame->setFrameShadow(QFrame::Raised);
+        verticalLayout_2 = new QVBoxLayout(frame);
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        label = new QLabel(frame1);
+        label = new QLabel(frame);
         label->setObjectName(QString::fromUtf8("label"));
 
         verticalLayout_2->addWidget(label);
 
 
-        verticalLayout->addWidget(frame1);
+        verticalLayout->addWidget(frame);
 
-        frame_2 = new QFrame(frame);
+        frame_2 = new QFrame(tabWidgetPage1);
         frame_2->setObjectName(QString::fromUtf8("frame_2"));
         sizePolicy1.setHeightForWidth(frame_2->sizePolicy().hasHeightForWidth());
         frame_2->setSizePolicy(sizePolicy1);
@@ -181,13 +187,14 @@ public:
 
         verticalLayout_3->addLayout(verticalLayout);
 
+        tabWidget->addTab(tabWidgetPage1, QString());
 
-        verticalLayout_4->addWidget(frame);
+        verticalLayout_4->addWidget(tabWidget);
 
         OpenBMP->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(OpenBMP);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 536, 17));
+        menuBar->setGeometry(QRect(0, 0, 374, 17));
         menuBlast = new QMenu(menuBar);
         menuBlast->setObjectName(QString::fromUtf8("menuBlast"));
         menuGO = new QMenu(menuBar);
@@ -237,7 +244,7 @@ public:
     void retranslateUi(QMainWindow *OpenBMP)
     {
         OpenBMP->setWindowTitle(QApplication::translate("OpenBMP", "OpenBMP", nullptr));
-        actionLocal_Blast_GUI->setText(QApplication::translate("OpenBMP", "Local Blast GUI", nullptr));
+        actionLocal_Blast_GUI->setText(QApplication::translate("OpenBMP", "BlatGUI", nullptr));
         actionColony_counter->setText(QApplication::translate("OpenBMP", "Colony counter", nullptr));
         actionGomoku->setText(QApplication::translate("OpenBMP", "Gomoku", nullptr));
         actionGreedy_Snake->setText(QApplication::translate("OpenBMP", "Greedy Snake", nullptr));
@@ -253,6 +260,7 @@ public:
         pushButton->setText(QApplication::translate("OpenBMP", "update", nullptr));
         pushButton_2->setText(QApplication::translate("OpenBMP", "citation", nullptr));
         label_2->setText(QApplication::translate("OpenBMP", "<html><head/><body><p><a href=\"https://github.com/zhaoy2020/openBMP\"><span style=\" text-decoration: underline; color:#0000ff;\">https://github.com/zhaoy2020/openBMP</span></a></p></body></html>", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tabWidgetPage1), QString());
         menuBlast->setTitle(QApplication::translate("OpenBMP", "Blast", nullptr));
         menuGO->setTitle(QApplication::translate("OpenBMP", "GO", nullptr));
         menuKEGG->setTitle(QApplication::translate("OpenBMP", "KEGG", nullptr));

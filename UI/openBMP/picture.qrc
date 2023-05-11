@@ -5,5 +5,7 @@
         <file>images/citation.svg</file>
         <file>images/Update.svg</file>
         <file>images/bacteria.svg</file>
+        <file>images/home2.svg</file>
+        <file>images/search.svg</file>
     </qresource>
 </RCC>

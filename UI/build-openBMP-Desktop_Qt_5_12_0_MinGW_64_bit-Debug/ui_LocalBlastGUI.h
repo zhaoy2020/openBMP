@@ -247,7 +247,7 @@ public:
 
     void retranslateUi(QWidget *LocalBlastGUI)
     {
-        LocalBlastGUI->setWindowTitle(QApplication::translate("LocalBlastGUI", "Form", nullptr));
+        LocalBlastGUI->setWindowTitle(QApplication::translate("LocalBlastGUI", "Local Blast GUI", nullptr));
         groupBox->setTitle(QApplication::translate("LocalBlastGUI", "Work station", nullptr));
         label->setText(QApplication::translate("LocalBlastGUI", "DB path", nullptr));
         pushButton->setText(QApplication::translate("LocalBlastGUI", "File", nullptr));

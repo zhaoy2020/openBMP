@@ -129,21 +129,7 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QComboBox" name="comboBox">
-        <property name="currentText">
-         <string>prot</string>
-        </property>
-        <item>
-         <property name="text">
-          <string>prot</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>nucl</string>
-         </property>
-        </item>
-       </widget>
+       <widget class="QComboBox" name="comboBox"/>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_5">
@@ -156,11 +142,7 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QSpinBox" name="spinBox">
-        <property name="specialValueText">
-         <string>2</string>
-        </property>
-       </widget>
+       <widget class="QSpinBox" name="spinBox"/>
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="label_6">
@@ -170,11 +152,7 @@
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QSpinBox" name="spinBox_2">
-        <property name="specialValueText">
-         <string>1</string>
-        </property>
-       </widget>
+       <widget class="QSpinBox" name="spinBox_2"/>
       </item>
       <item row="3" column="0">
        <widget class="QLabel" name="label_7">
@@ -184,11 +162,7 @@
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QSpinBox" name="spinBox_3">
-        <property name="specialValueText">
-         <string>1</string>
-        </property>
-       </widget>
+       <widget class="QSpinBox" name="spinBox_3"/>
       </item>
       <item row="4" column="1">
        <widget class="QDoubleSpinBox" name="doubleSpinBox_4">
@@ -197,18 +171,6 @@
         </property>
         <property name="accelerated">
          <bool>false</bool>
-        </property>
-        <property name="decimals">
-         <number>6</number>
-        </property>
-        <property name="minimum">
-         <double>0.000001000000000</double>
-        </property>
-        <property name="singleStep">
-         <double>0.000010000000000</double>
-        </property>
-        <property name="value">
-         <double>0.000010000000000</double>
         </property>
        </widget>
       </item>
@@ -220,11 +182,7 @@
        </widget>
       </item>
       <item row="5" column="1">
-       <widget class="QSpinBox" name="spinBox_5">
-        <property name="specialValueText">
-         <string>6</string>
-        </property>
-       </widget>
+       <widget class="QSpinBox" name="spinBox_5"/>
       </item>
       <item row="6" column="0">
        <widget class="QLabel" name="label_10">
@@ -237,28 +195,7 @@
        </widget>
       </item>
       <item row="6" column="1">
-       <widget class="QComboBox" name="comboBox_2">
-        <item>
-         <property name="text">
-          <string>blastp (aa/aa)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>blastn (nt/nt)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>blastx (nt/aa)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>tblastn (aa/nt)</string>
-         </property>
-        </item>
-       </widget>
+       <widget class="QComboBox" name="comboBox_2"/>
       </item>
       <item row="4" column="0">
        <widget class="QLabel" name="label_8">
