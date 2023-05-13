@@ -84,7 +84,7 @@ class QLocalBlastGUI(QtWidgets.QWidget):
     @QtCore.pyqtSlot()
     def on_pushButton_clicked(self):
         curPath = os.getcwd()
-        self.DBFileName, DBflt = QtWidgets.QFileDialog.getOpenFileName(self, "选择DB路径", curPath, "文本文件(*.fasta,*.ffn,*.fnn,*.ffa,*.faa,*.fa);;所有文件(*.*)")
+        self.DBFileName, DBflt = QtWidgets.QFileDialog.getOpenFileName(self, "选择DB路径", curPath, "文本文件(*.fasta;*.ffn;*.fnn;*.ffa;*.faa;*.fa);;所有文件(*.*)")
         print(f"导入文件{self.DBFileName}")
         print(f"文件类型为{DBflt}")
         self.ui.textBrowser.append(f"导入文件{self.DBFileName}")
@@ -95,7 +95,7 @@ class QLocalBlastGUI(QtWidgets.QWidget):
     @QtCore.pyqtSlot()
     def on_pushButton_2_clicked(self):
         curPath = os.getcwd()
-        self.QueryFileName, flt = QtWidgets.QFileDialog.getOpenFileName(self, "选择Query路径", curPath, "文本文件(*.fasta,*.ffn,*.fnn,*.ffa,*.faa,*.fa);;所有文件(*.*)")
+        self.QueryFileName, flt = QtWidgets.QFileDialog.getOpenFileName(self, "选择Query路径", curPath, "文本文件(*.fasta;*.ffn;*.fnn;*.ffa;*.faa,*.fa);;所有文件(*.*)")
         print(f"导入文件{self.QueryFileName}")
         print(f"文件类型为{flt}")
         self.ui.textBrowser.append(f"导入文件{self.QueryFileName}")
