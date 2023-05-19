@@ -10,6 +10,7 @@
 #define UI_LOCALBLASTGUI_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDoubleSpinBox>
@@ -56,12 +57,12 @@ public:
     QSpinBox *spinBox_2;
     QLabel *label_7;
     QSpinBox *spinBox_3;
-    QLabel *label_8;
+    QDoubleSpinBox *doubleSpinBox_4;
     QLabel *label_9;
     QSpinBox *spinBox_5;
     QLabel *label_10;
     QComboBox *comboBox_2;
-    QDoubleSpinBox *doubleSpinBox_4;
+    QLabel *label_8;
     QGroupBox *groupBox_4;
     QVBoxLayout *verticalLayout;
     QTextBrowser *textBrowser;
@@ -71,6 +72,9 @@ public:
         if (LocalBlastGUI->objectName().isEmpty())
             LocalBlastGUI->setObjectName(QString::fromUtf8("LocalBlastGUI"));
         LocalBlastGUI->resize(285, 461);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/icons/images/search.svg"), QSize(), QIcon::Normal, QIcon::On);
+        LocalBlastGUI->setWindowIcon(icon);
         verticalLayout_2 = new QVBoxLayout(LocalBlastGUI);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         groupBox = new QGroupBox(LocalBlastGUI);
@@ -151,6 +155,7 @@ public:
         groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
         formLayout = new QFormLayout(groupBox_3);
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
+        formLayout->setLabelAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         label_4 = new QLabel(groupBox_3);
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setAlignment(Qt::AlignCenter);
@@ -158,6 +163,8 @@ public:
         formLayout->setWidget(0, QFormLayout::LabelRole, label_4);
 
         comboBox = new QComboBox(groupBox_3);
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
 
         formLayout->setWidget(0, QFormLayout::FieldRole, comboBox);
@@ -193,10 +200,15 @@ public:
 
         formLayout->setWidget(3, QFormLayout::FieldRole, spinBox_3);
 
-        label_8 = new QLabel(groupBox_3);
-        label_8->setObjectName(QString::fromUtf8("label_8"));
+        doubleSpinBox_4 = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_4->setObjectName(QString::fromUtf8("doubleSpinBox_4"));
+        doubleSpinBox_4->setAccelerated(false);
+        doubleSpinBox_4->setDecimals(6);
+        doubleSpinBox_4->setMinimum(0.000001000000000);
+        doubleSpinBox_4->setSingleStep(0.000010000000000);
+        doubleSpinBox_4->setValue(0.000010000000000);
 
-        formLayout->setWidget(4, QFormLayout::LabelRole, label_8);
+        formLayout->setWidget(4, QFormLayout::FieldRole, doubleSpinBox_4);
 
         label_9 = new QLabel(groupBox_3);
         label_9->setObjectName(QString::fromUtf8("label_9"));
@@ -215,14 +227,18 @@ public:
         formLayout->setWidget(6, QFormLayout::LabelRole, label_10);
 
         comboBox_2 = new QComboBox(groupBox_3);
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
         comboBox_2->setObjectName(QString::fromUtf8("comboBox_2"));
 
         formLayout->setWidget(6, QFormLayout::FieldRole, comboBox_2);
 
-        doubleSpinBox_4 = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_4->setObjectName(QString::fromUtf8("doubleSpinBox_4"));
+        label_8 = new QLabel(groupBox_3);
+        label_8->setObjectName(QString::fromUtf8("label_8"));
 
-        formLayout->setWidget(4, QFormLayout::FieldRole, doubleSpinBox_4);
+        formLayout->setWidget(4, QFormLayout::LabelRole, label_8);
 
 
         verticalLayout_2->addWidget(groupBox_3);
@@ -261,12 +277,26 @@ public:
         pushButton_6->setText(QApplication::translate("LocalBlastGUI", "Default parameters", nullptr));
         groupBox_3->setTitle(QApplication::translate("LocalBlastGUI", "Parameters", nullptr));
         label_4->setText(QApplication::translate("LocalBlastGUI", "dbtype", nullptr));
+        comboBox->setItemText(0, QApplication::translate("LocalBlastGUI", "prot", nullptr));
+        comboBox->setItemText(1, QApplication::translate("LocalBlastGUI", "nucl", nullptr));
+
+        comboBox->setCurrentText(QApplication::translate("LocalBlastGUI", "prot", nullptr));
         label_5->setText(QApplication::translate("LocalBlastGUI", "CPU threads", nullptr));
+        spinBox->setSpecialValueText(QApplication::translate("LocalBlastGUI", "2", nullptr));
         label_6->setText(QApplication::translate("LocalBlastGUI", "max_hsps", nullptr));
+        spinBox_2->setSpecialValueText(QApplication::translate("LocalBlastGUI", "1", nullptr));
         label_7->setText(QApplication::translate("LocalBlastGUI", "num_aligments", nullptr));
-        label_8->setText(QApplication::translate("LocalBlastGUI", "Evalue", nullptr));
+        spinBox_3->setSpecialValueText(QApplication::translate("LocalBlastGUI", "1", nullptr));
+        doubleSpinBox_4->setSpecialValueText(QApplication::translate("LocalBlastGUI", "0.00001", nullptr));
         label_9->setText(QApplication::translate("LocalBlastGUI", "outfmt", nullptr));
+        spinBox_5->setSpecialValueText(QApplication::translate("LocalBlastGUI", "6", nullptr));
         label_10->setText(QApplication::translate("LocalBlastGUI", "Blasttype", nullptr));
+        comboBox_2->setItemText(0, QApplication::translate("LocalBlastGUI", "blastp (aa/aa)", nullptr));
+        comboBox_2->setItemText(1, QApplication::translate("LocalBlastGUI", "blastn (nt/nt)", nullptr));
+        comboBox_2->setItemText(2, QApplication::translate("LocalBlastGUI", "blastx (nt/aa)", nullptr));
+        comboBox_2->setItemText(3, QApplication::translate("LocalBlastGUI", "tblastn (aa/nt)", nullptr));
+
+        label_8->setText(QApplication::translate("LocalBlastGUI", "Evalue", nullptr));
         groupBox_4->setTitle(QApplication::translate("LocalBlastGUI", "Termininal", nullptr));
     } // retranslateUi
 

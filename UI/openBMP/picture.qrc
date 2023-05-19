@@ -7,5 +7,7 @@
         <file>images/bacteria.svg</file>
         <file>images/home2.svg</file>
         <file>images/search.svg</file>
+        <file>images/save.svg</file>
+        <file>images/DNA.svg</file>
     </qresource>
 </RCC>

@@ -25,6 +25,7 @@ PyQt5:
     QtGui
 '''
 import LocalBlastGUI_logic
+import LigationCalculator_logic
 
 # =============================================================================
 # 编译openBMP.ui至py文件
@@ -70,6 +71,11 @@ class QmyMianWindow(QtWidgets.QMainWindow):  # 使用单继承的方式进行操
         '''
         print(f"删除index为{index}的tabWidget窗口")
         self.ui.tabWidget.widget(index).close()
+        
+    @QtCore.pyqtSlot()
+    def on_actionLigation_Calculator_triggered(self):
+        LigationCalculator = LigationCalculator_logic.QLigationCalculator(self)
+        LigationCalculator.show()
 
 
     @QtCore.pyqtSlot()

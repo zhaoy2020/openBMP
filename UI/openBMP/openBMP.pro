@@ -27,15 +27,21 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         OpenBMP.cpp \
-    LocalBlastGUI.cpp
+    LocalBlastGUI.cpp \
+    MolarityCalculator.cpp \
+    LigationCalculator.cpp
 
 HEADERS += \
         OpenBMP.h \
-    LocalBlastGUI.h
+    LocalBlastGUI.h \
+    MolarityCalculator.h \
+    LigationCalculator.h
 
 FORMS += \
         OpenBMP.ui \
-    LocalBlastGUI.ui
+    LocalBlastGUI.ui \
+    MolarityCalculator.ui \
+    LigationCalculator.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

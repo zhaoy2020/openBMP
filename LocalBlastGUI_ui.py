@@ -175,4 +175,3 @@ class Ui_LocalBlastGUI(object):
         self.comboBox_2.setItemText(3, _translate("LocalBlastGUI", "tblastn (aa/nt)"))
         self.label_8.setText(_translate("LocalBlastGUI", "Evalue"))
         self.groupBox_4.setTitle(_translate("LocalBlastGUI", "Termininal"))
-import picture_rc

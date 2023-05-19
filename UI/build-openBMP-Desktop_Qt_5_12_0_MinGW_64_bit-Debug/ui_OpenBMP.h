@@ -41,6 +41,7 @@ public:
     QAction *actionInterproscan;
     QAction *actionEggnog;
     QAction *actionAbout;
+    QAction *actionMolarity_calculator;
     QWidget *centralWidget;
     QVBoxLayout *verticalLayout_4;
     QTabWidget *tabWidget;
@@ -63,6 +64,7 @@ public:
     QMenu *menuOthers;
     QMenu *menuGames;
     QMenu *menuHelp;
+    QMenu *menuHelp_2;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -70,7 +72,7 @@ public:
     {
         if (OpenBMP->objectName().isEmpty())
             OpenBMP->setObjectName(QString::fromUtf8("OpenBMP"));
-        OpenBMP->resize(374, 443);
+        OpenBMP->resize(374, 446);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/icons/images/bacteria.svg"), QSize(), QIcon::Normal, QIcon::On);
         OpenBMP->setWindowIcon(icon);
@@ -94,6 +96,8 @@ public:
         actionEggnog->setObjectName(QString::fromUtf8("actionEggnog"));
         actionAbout = new QAction(OpenBMP);
         actionAbout->setObjectName(QString::fromUtf8("actionAbout"));
+        actionMolarity_calculator = new QAction(OpenBMP);
+        actionMolarity_calculator->setObjectName(QString::fromUtf8("actionMolarity_calculator"));
         centralWidget = new QWidget(OpenBMP);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
@@ -109,6 +113,8 @@ public:
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tabWidget->setDocumentMode(true);
         tabWidget->setTabsClosable(true);
+        tabWidget->setMovable(false);
+        tabWidget->setTabBarAutoHide(true);
         tabWidgetPage1 = new QWidget();
         tabWidgetPage1->setObjectName(QString::fromUtf8("tabWidgetPage1"));
         verticalLayout_3 = new QVBoxLayout(tabWidgetPage1);
@@ -187,7 +193,9 @@ public:
 
         verticalLayout_3->addLayout(verticalLayout);
 
-        tabWidget->addTab(tabWidgetPage1, QString());
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/icons/images/home2.svg"), QSize(), QIcon::Normal, QIcon::On);
+        tabWidget->addTab(tabWidgetPage1, icon3, QString());
 
         verticalLayout_4->addWidget(tabWidget);
 
@@ -209,6 +217,8 @@ public:
         menuGames->setObjectName(QString::fromUtf8("menuGames"));
         menuHelp = new QMenu(menuBar);
         menuHelp->setObjectName(QString::fromUtf8("menuHelp"));
+        menuHelp_2 = new QMenu(menuBar);
+        menuHelp_2->setObjectName(QString::fromUtf8("menuHelp_2"));
         OpenBMP->setMenuBar(menuBar);
         mainToolBar = new QToolBar(OpenBMP);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -224,16 +234,17 @@ public:
         menuBar->addAction(menuOthers->menuAction());
         menuBar->addAction(menuGames->menuAction());
         menuBar->addAction(menuHelp->menuAction());
+        menuBar->addAction(menuHelp_2->menuAction());
         menuBlast->addAction(actionLocal_Blast_GUI);
         menuBlast->addAction(actionExit_2);
         menuGO->addAction(actionIDmapping);
         menuGO->addAction(actionInterproscan);
         menuGO->addAction(actionEggnog);
         menuOthers->addAction(actionColony_counter);
+        menuOthers->addAction(actionMolarity_calculator);
         menuGames->addAction(actionGomoku);
         menuGames->addAction(actionGreedy_Snake);
         menuGames->addAction(actionAngry_Birds);
-        menuHelp->addAction(actionAbout);
 
         retranslateUi(OpenBMP);
         QObject::connect(actionExit_2, SIGNAL(triggered()), OpenBMP, SLOT(close()));
@@ -253,21 +264,24 @@ public:
         actionIDmapping->setText(QApplication::translate("OpenBMP", "IDmapping", nullptr));
         actionInterproscan->setText(QApplication::translate("OpenBMP", "Interproscan", nullptr));
         actionEggnog->setText(QApplication::translate("OpenBMP", "Eggnog", nullptr));
-        actionAbout->setText(QApplication::translate("OpenBMP", "About", nullptr));
+        actionAbout->setText(QApplication::translate("OpenBMP", "Qiime2", nullptr));
+        actionMolarity_calculator->setText(QApplication::translate("OpenBMP", "Molarity calculator\n"
+"", nullptr));
         label->setText(QApplication::translate("OpenBMP", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt;\">\345\214\227\345\233\275\351\243\216\345\205\211\357\274\214\345\215\203\351\207\214\345\206\260\345\260\201\357\274\214\344\270\207\351\207\214\351\233\252\351\243\230\343\200\202</span></p><p align=\"center\"><span style=\" font-size:14pt;\">\346\234\233\351\225\277\345\237\216\345\206\205\345\244\226\357\274\214\346\203\237\344\275\231\350\216\275\350\216\275\357\274\233</span></p><p align=\"center\"><span style=\" font-size:14pt;\">\345\244\247\346\262\263\344\270\212\344\270\213\357\274\214\351\241\277\345\244\261\346\273\224\346\273\224\343\200\202</span></p><p align=\"center\"><span style=\" font-size:14pt;\">\345\261\261\350\210\236\351\223\266\350\233\207\357\274\214\345\216\237\351\251\260\350\234\241\350\261\241\357\274\214\346\254\262\344\270\216\345\244\251\345\205\254\350\257\225\346\257\224\351\253\230\343\200\202</span></p><p align=\"center\"><span style=\" font-size:14pt;\">\351\241\273\346\231\264\346\227\245\357\274\214\347"
                         "\234\213\347\272\242\350\243\205\347\264\240\350\243\271\357\274\214\345\210\206\345\244\226\345\246\226\345\250\206\343\200\202</span></p><p align=\"center\"><span style=\" font-size:14pt;\">\346\261\237\345\261\261\345\246\202\346\255\244\345\244\232\345\250\207\357\274\214\345\274\225\346\227\240\346\225\260\350\213\261\351\233\204\347\253\236\346\212\230\350\205\260\343\200\202</span></p><p align=\"center\"><span style=\" font-size:14pt;\">\346\203\234\347\247\246\347\232\207\346\261\211\346\255\246\357\274\214\347\225\245\350\276\223\346\226\207\351\207\207\357\274\233</span></p><p align=\"center\"><span style=\" font-size:14pt;\">\345\224\220\345\256\227\345\256\213\347\245\226\357\274\214\347\250\215\351\200\212\351\243\216\351\252\232\343\200\202</span></p><p align=\"center\"><span style=\" font-size:14pt;\">\344\270\200\344\273\243\345\244\251\351\252\204\357\274\214\346\210\220\345\220\211\346\200\235\346\261\227\357\274\214\345\217\252\350\257\206\345\274\257\345\274\223\345\260\204\345\244\247\351\233"
                         "\225\343\200\202</span></p><p align=\"center\"><span style=\" font-size:14pt;\">\344\277\261\345\276\200\347\237\243\357\274\214\346\225\260\351\243\216\346\265\201\344\272\272\347\211\251\357\274\214\350\277\230\347\234\213\344\273\212\346\234\235\343\200\202</span></p><p align=\"center\"><span style=\" font-size:14pt;\">--\346\257\233\346\263\275\344\270\234</span></p></body></html>", nullptr));
         pushButton->setText(QApplication::translate("OpenBMP", "update", nullptr));
         pushButton_2->setText(QApplication::translate("OpenBMP", "citation", nullptr));
         label_2->setText(QApplication::translate("OpenBMP", "<html><head/><body><p><a href=\"https://github.com/zhaoy2020/openBMP\"><span style=\" text-decoration: underline; color:#0000ff;\">https://github.com/zhaoy2020/openBMP</span></a></p></body></html>", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tabWidgetPage1), QString());
+        tabWidget->setTabText(tabWidget->indexOf(tabWidgetPage1), QApplication::translate("OpenBMP", "Home", nullptr));
         menuBlast->setTitle(QApplication::translate("OpenBMP", "Blast", nullptr));
         menuGO->setTitle(QApplication::translate("OpenBMP", "GO", nullptr));
         menuKEGG->setTitle(QApplication::translate("OpenBMP", "KEGG", nullptr));
         menuCOG->setTitle(QApplication::translate("OpenBMP", "COG", nullptr));
         menuOthers->setTitle(QApplication::translate("OpenBMP", "Others", nullptr));
         menuGames->setTitle(QApplication::translate("OpenBMP", "Games", nullptr));
-        menuHelp->setTitle(QApplication::translate("OpenBMP", "Help", nullptr));
+        menuHelp->setTitle(QApplication::translate("OpenBMP", "Qiime2", nullptr));
+        menuHelp_2->setTitle(QApplication::translate("OpenBMP", "Help", nullptr));
     } // retranslateUi
 
 };

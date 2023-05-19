@@ -197,6 +197,8 @@
      <string>Others</string>
     </property>
     <addaction name="actionColony_counter"/>
+    <addaction name="actionMolarity_calculator"/>
+    <addaction name="actionLigation_Calculator"/>
    </widget>
    <widget class="QMenu" name="menuGames">
     <property name="title">
@@ -208,9 +210,13 @@
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
+     <string>Qiime2</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp_2">
+    <property name="title">
      <string>Help</string>
     </property>
-    <addaction name="actionAbout"/>
    </widget>
    <addaction name="menuBlast"/>
    <addaction name="menuGO"/>
@@ -219,6 +225,7 @@
    <addaction name="menuOthers"/>
    <addaction name="menuGames"/>
    <addaction name="menuHelp"/>
+   <addaction name="menuHelp_2"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -276,7 +283,18 @@
   </action>
   <action name="actionAbout">
    <property name="text">
-    <string>About</string>
+    <string>Qiime2</string>
+   </property>
+  </action>
+  <action name="actionMolarity_calculator">
+   <property name="text">
+    <string>Molarity calculator
+</string>
+   </property>
+  </action>
+  <action name="actionLigation_Calculator">
+   <property name="text">
+    <string>Ligation Calculator</string>
    </property>
   </action>
  </widget>
