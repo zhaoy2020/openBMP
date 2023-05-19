@@ -53,37 +53,41 @@ class QLigationCalculator(QtWidgets.QDialog):
         
     @QtCore.pyqtSlot()
     def on_pushButton_5_clicked(self):
-        M1 = self.ui.lineEdit.text()
-        C1 = self.ui.lineEdit_2.text()
-        M2 = self.ui.lineEdit_5.text()
-        C2 = self.ui.lineEdit_4.text()
-        v2 = self.ui.lineEdit_7.text()
-        VOLUE = self.ui.lineEdit_6.text()
-        
-        self.ui.label_15.setText(self.reactionVolume(1, M1, C1, M2, C2, v2, VOLUE)[0])
-        self.ui.label_14.setText(self.reactionVolume(1, M1, C1, M2, C2, v2, VOLUE)[1])
-        self.ui.label_13.setText(self.reactionVolume(1, M1, C1, M2, C2, v2, VOLUE)[2])
-        self.ui.label_4.setText(self.reactionVolume(1, M1, C1, M2, C2, v2, VOLUE)[3])
-        
-        self.ui.label_18.setText(self.reactionVolume(2, M1, C1, M2, C2, v2, VOLUE)[0])
-        self.ui.label_19.setText(self.reactionVolume(2, M1, C1, M2, C2, v2, VOLUE)[1])
-        self.ui.label_17.setText(self.reactionVolume(2, M1, C1, M2, C2, v2, VOLUE)[2])
-        self.ui.label_9.setText(self.reactionVolume(2, M1, C1, M2, C2, v2, VOLUE)[3])
-        
-        self.ui.label_23.setText(self.reactionVolume(3, M1, C1, M2, C2, v2, VOLUE)[0])
-        self.ui.label_24.setText(self.reactionVolume(3, M1, C1, M2, C2, v2, VOLUE)[1])
-        self.ui.label_21.setText(self.reactionVolume(3, M1, C1, M2, C2, v2, VOLUE)[2])
-        self.ui.label_34.setText(self.reactionVolume(3, M1, C1, M2, C2, v2, VOLUE)[3])
-        
-        self.ui.label_27.setText(self.reactionVolume(5, M1, C1, M2, C2, v2, VOLUE)[0])
-        self.ui.label_26.setText(self.reactionVolume(5, M1, C1, M2, C2, v2, VOLUE)[1])
-        self.ui.label_28.setText(self.reactionVolume(5, M1, C1, M2, C2, v2, VOLUE)[2])
-        self.ui.label_35.setText(self.reactionVolume(5, M1, C1, M2, C2, v2, VOLUE)[3])
-        
-        self.ui.label_31.setText(self.reactionVolume(7, M1, C1, M2, C2, v2, VOLUE)[0])
-        self.ui.label_32.setText(self.reactionVolume(7, M1, C1, M2, C2, v2, VOLUE)[1])
-        self.ui.label_29.setText(self.reactionVolume(7, M1, C1, M2, C2, v2, VOLUE)[2])
-        self.ui.label_36.setText(self.reactionVolume(7, M1, C1, M2, C2, v2, VOLUE)[3])
+        try:
+            M1 = self.ui.lineEdit.text()
+            C1 = self.ui.lineEdit_2.text()
+            M2 = self.ui.lineEdit_5.text()
+            C2 = self.ui.lineEdit_4.text()
+            v2 = self.ui.lineEdit_7.text()
+            VOLUE = self.ui.lineEdit_6.text()
+            
+            self.ui.label_15.setText(self.reactionVolume(1, M1, C1, M2, C2, v2, VOLUE)[0])
+            self.ui.label_14.setText(self.reactionVolume(1, M1, C1, M2, C2, v2, VOLUE)[1])
+            self.ui.label_13.setText(self.reactionVolume(1, M1, C1, M2, C2, v2, VOLUE)[2])
+            self.ui.label_4.setText(self.reactionVolume(1, M1, C1, M2, C2, v2, VOLUE)[3])
+            
+            self.ui.label_18.setText(self.reactionVolume(2, M1, C1, M2, C2, v2, VOLUE)[0])
+            self.ui.label_19.setText(self.reactionVolume(2, M1, C1, M2, C2, v2, VOLUE)[1])
+            self.ui.label_17.setText(self.reactionVolume(2, M1, C1, M2, C2, v2, VOLUE)[2])
+            self.ui.label_9.setText(self.reactionVolume(2, M1, C1, M2, C2, v2, VOLUE)[3])
+            
+            self.ui.label_23.setText(self.reactionVolume(3, M1, C1, M2, C2, v2, VOLUE)[0])
+            self.ui.label_24.setText(self.reactionVolume(3, M1, C1, M2, C2, v2, VOLUE)[1])
+            self.ui.label_21.setText(self.reactionVolume(3, M1, C1, M2, C2, v2, VOLUE)[2])
+            self.ui.label_34.setText(self.reactionVolume(3, M1, C1, M2, C2, v2, VOLUE)[3])
+            
+            self.ui.label_27.setText(self.reactionVolume(5, M1, C1, M2, C2, v2, VOLUE)[0])
+            self.ui.label_26.setText(self.reactionVolume(5, M1, C1, M2, C2, v2, VOLUE)[1])
+            self.ui.label_28.setText(self.reactionVolume(5, M1, C1, M2, C2, v2, VOLUE)[2])
+            self.ui.label_35.setText(self.reactionVolume(5, M1, C1, M2, C2, v2, VOLUE)[3])
+            
+            self.ui.label_31.setText(self.reactionVolume(7, M1, C1, M2, C2, v2, VOLUE)[0])
+            self.ui.label_32.setText(self.reactionVolume(7, M1, C1, M2, C2, v2, VOLUE)[1])
+            self.ui.label_29.setText(self.reactionVolume(7, M1, C1, M2, C2, v2, VOLUE)[2])
+            self.ui.label_36.setText(self.reactionVolume(7, M1, C1, M2, C2, v2, VOLUE)[3])
+        except:
+            QtWidgets.QMessageBox.warning(self, "错误", "不能为空！")
+                
 
 
 if __name__ == "__main__":

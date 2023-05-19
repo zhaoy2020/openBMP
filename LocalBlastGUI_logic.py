@@ -111,27 +111,37 @@ class QLocalBlastGUI(QtWidgets.QWidget):
         # self.ui.textBrowser.moveCursor(self.textBrowser.textCursor().End)
         self.ui.lineEdit_3.setText(self.outputDir)
 
+    @QtCore.pyqtSlot()
     def on_pushButton_4_clicked(self):
-        makeDBcmd = f"\
-            makeblastdb.exe \
-            -dbtype {self.ui.comboBox.currentText()} \
-                -in {self.DBFileName} \
-                    -parse_seqids \
-                            -out {self.DBFileName.split('.')[0]}"
-        print("start:\n",makeDBcmd)
-        self.ui.textBrowser.append(f"start: {makeDBcmd}")
-        # self.ui.textBrowser.moveCursor(self.textBrowser.textCursor().End)
-        os.system(makeDBcmd)
+        try:
+            makeDBcmd = f"\
+                makeblastdb.exe \
+                -dbtype {self.ui.comboBox.currentText()} \
+                    -in {self.DBFileName} \
+                        -parse_seqids \
+                                -out {self.DBFileName.split('.')[0]}"
+            print("start:\n",makeDBcmd)
+            self.ui.textBrowser.append(f"start: {makeDBcmd}")
+            # self.ui.textBrowser.moveCursor(self.textBrowser.textCursor().End)
+            os.system(makeDBcmd)
+        except :
+            QtWidgets.QMessageBox.warning(self, "warining", "system errors")
 
+
+    @QtCore.pyqtSlot()
     def on_pushButton_5_clicked(self):
-        if self.ui.spinBox_5.value() == 6:
-            blastcmd = f'''{self.ui.comboBox_2.currentText().split(" ")[0]} -num_threads {self.ui.spinBox.value()} -query {self.DBFileName} -db {self.DBFileName.split('.')[0]} -out {self.outputDir}{os.path.basename(self.QueryFileName).split('.')[0]}_results.txt -max_hsps {self.ui.spinBox_2.value()} -num_alignments {self.ui.spinBox_3.value()} -evalue {self.ui.doubleSpinBox_4.value()} -outfmt "{self.ui.spinBox_5.value()} qseqid sseqid sgi stitle evalue bitscore pident qcovs length mismatch gapopen qstart qend sstart send"'''
-        else:
-            blastcmd = f'''{self.ui.comboBox_2.currentText().split(" ")[0]} -num_threads {self.ui.spinBox.value()} -query {self.DBFileName} -db {self.DBFileName.split('.')[0]} -out {self.outputDir}{os.path.basename(self.QueryFileName).split('.')[0]}_results.txt -max_hsps {self.ui.spinBox_2.value()} -num_alignments {self.ui.spinBox_3.value()} -evalue {self.ui.doubleSpinBox_4.value()} -outfmt {self.ui.spinBox_5.value()}'''
-        print(blastcmd)
-        self.ui.textBrowser.append(f"start: {blastcmd}")
-        # self.ui.textBrowser.moveCursor(self.textBrowser.textCursor().End)
-        os.system(blastcmd)
+        try:
+            if self.ui.spinBox_5.value() == 6:
+                blastcmd = f'''{self.ui.comboBox_2.currentText().split(" ")[0]} -num_threads {self.ui.spinBox.value()} -query {self.DBFileName} -db {self.DBFileName.split('.')[0]} -out {self.outputDir}{os.path.basename(self.QueryFileName).split('.')[0]}_results.txt -max_hsps {self.ui.spinBox_2.value()} -num_alignments {self.ui.spinBox_3.value()} -evalue {self.ui.doubleSpinBox_4.value()} -outfmt "{self.ui.spinBox_5.value()} qseqid sseqid sgi stitle evalue bitscore pident qcovs length mismatch gapopen qstart qend sstart send"'''
+            else:
+                blastcmd = f'''{self.ui.comboBox_2.currentText().split(" ")[0]} -num_threads {self.ui.spinBox.value()} -query {self.DBFileName} -db {self.DBFileName.split('.')[0]} -out {self.outputDir}{os.path.basename(self.QueryFileName).split('.')[0]}_results.txt -max_hsps {self.ui.spinBox_2.value()} -num_alignments {self.ui.spinBox_3.value()} -evalue {self.ui.doubleSpinBox_4.value()} -outfmt {self.ui.spinBox_5.value()}'''
+            print(blastcmd)
+            self.ui.textBrowser.append(f"start: {blastcmd}")
+            # self.ui.textBrowser.moveCursor(self.textBrowser.textCursor().End)
+            os.system(blastcmd)
+        except:
+            QtWidgets.QMessageBox.warning(self, "warining", "system errors")
+
 
 if __name__ == "__main__":
     '''

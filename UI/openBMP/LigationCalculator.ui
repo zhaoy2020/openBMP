@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>连接体系计算器</string>
+   <string>Ligation Calculator</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -272,7 +272,7 @@
       <item row="4" column="2">
        <widget class="QLabel" name="label_27">
         <property name="text">
-         <string>1</string>
+         <string>0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -305,7 +305,7 @@
       <item row="5" column="4">
        <widget class="QLabel" name="label_32">
         <property name="text">
-         <string>1</string>
+         <string>0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -341,7 +341,7 @@
       <item row="3" column="4">
        <widget class="QLabel" name="label_24">
         <property name="text">
-         <string>1</string>
+         <string>0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -433,7 +433,7 @@
       <item row="3" column="2">
        <widget class="QLabel" name="label_23">
         <property name="text">
-         <string>1</string>
+         <string>0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -469,7 +469,7 @@
       <item row="2" column="4">
        <widget class="QLabel" name="label_19">
         <property name="text">
-         <string>1</string>
+         <string>0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -541,7 +541,7 @@
       <item row="1" column="4">
        <widget class="QLabel" name="label_14">
         <property name="text">
-         <string>1</string>
+         <string>0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -574,7 +574,7 @@
       <item row="4" column="6">
        <widget class="QLabel" name="label_28">
         <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -607,7 +607,7 @@
       <item row="5" column="6">
        <widget class="QLabel" name="label_29">
         <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -617,7 +617,7 @@
       <item row="4" column="4">
        <widget class="QLabel" name="label_26">
         <property name="text">
-         <string>1</string>
+         <string>0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -627,7 +627,7 @@
       <item row="1" column="2">
        <widget class="QLabel" name="label_15">
         <property name="text">
-         <string>1</string>
+         <string>0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -650,7 +650,7 @@
       <item row="2" column="2">
        <widget class="QLabel" name="label_18">
         <property name="text">
-         <string>1</string>
+         <string>0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -660,7 +660,7 @@
       <item row="1" column="6">
        <widget class="QLabel" name="label_13">
         <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -670,7 +670,7 @@
       <item row="3" column="6">
        <widget class="QLabel" name="label_21">
         <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -703,7 +703,7 @@
       <item row="2" column="6">
        <widget class="QLabel" name="label_17">
         <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -723,7 +723,7 @@
       <item row="5" column="2">
        <widget class="QLabel" name="label_31">
         <property name="text">
-         <string>1</string>
+         <string>0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -756,7 +756,7 @@
       <item row="1" column="7">
        <widget class="QLabel" name="label_4">
         <property name="text">
-         <string>1</string>
+         <string>0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -766,7 +766,7 @@
       <item row="2" column="7">
        <widget class="QLabel" name="label_9">
         <property name="text">
-         <string>1</string>
+         <string>0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -776,7 +776,7 @@
       <item row="3" column="7">
        <widget class="QLabel" name="label_34">
         <property name="text">
-         <string>1</string>
+         <string>0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -786,7 +786,7 @@
       <item row="4" column="7">
        <widget class="QLabel" name="label_35">
         <property name="text">
-         <string>1</string>
+         <string>0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -796,7 +796,7 @@
       <item row="5" column="7">
        <widget class="QLabel" name="label_36">
         <property name="text">
-         <string>1</string>
+         <string>0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
