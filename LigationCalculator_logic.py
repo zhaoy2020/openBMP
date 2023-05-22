@@ -85,6 +85,11 @@ class QLigationCalculator(QtWidgets.QDialog):
             self.ui.label_32.setText(self.reactionVolume(7, M1, C1, M2, C2, v2, VOLUE)[1])
             self.ui.label_29.setText(self.reactionVolume(7, M1, C1, M2, C2, v2, VOLUE)[2])
             self.ui.label_36.setText(self.reactionVolume(7, M1, C1, M2, C2, v2, VOLUE)[3])
+            
+            self.ui.label_38.setText(self.reactionVolume(8, M1, C1, M2, C2, v2, VOLUE)[0])
+            self.ui.label_39.setText(self.reactionVolume(8, M1, C1, M2, C2, v2, VOLUE)[1])
+            self.ui.label_40.setText(self.reactionVolume(8, M1, C1, M2, C2, v2, VOLUE)[2])
+            self.ui.label_41.setText(self.reactionVolume(8, M1, C1, M2, C2, v2, VOLUE)[3])
         except:
             QtWidgets.QMessageBox.warning(self, "错误", "不能为空！")
                 

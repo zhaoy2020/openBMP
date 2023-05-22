@@ -213,3 +213,4 @@ class Ui_OpenBMP(object):
         self.actionMolarity_calculator.setText(_translate("OpenBMP", "Molarity calculator\n"
 ""))
         self.actionLigation_Calculator.setText(_translate("OpenBMP", "Ligation Calculator"))
+import picture_rc

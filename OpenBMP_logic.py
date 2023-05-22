@@ -82,7 +82,9 @@ class QmyMianWindow(QtWidgets.QMainWindow):  # 使用单继承的方式进行操
     def on_actionGomoku_triggered(self):
         print('This is a test.')
         try:
-            os.popen(f'python ./Scripts/Gomoku.py')
+            # os.popen(f'python ./Scripts/Gomoku.py')
+            import Scripts.Gomoku
+            Scripts.Gomoku.runGame()
         except:
             pass 
 
@@ -90,7 +92,9 @@ class QmyMianWindow(QtWidgets.QMainWindow):  # 使用单继承的方式进行操
     def on_actionGreedy_Snake_triggered(self):
         print('This is a test.')
         try:
-            os.popen(f'python ./Scripts/Snake.py')
+            # os.popen(f'python ./Scripts/Snake.py')
+            import Scripts.Snake
+            Scripts.Snake.runGame()
         except:
             pass 
 
@@ -98,7 +102,9 @@ class QmyMianWindow(QtWidgets.QMainWindow):  # 使用单继承的方式进行操
     def on_actionAngry_Birds_triggered(self):
         print('This is a test.')
         try:
-            os.popen(f'cd scripts/FlyBrid/ && python flappy.py')
+            # os.popen(f'cd scripts/FlyBrid/ && python flappy.py')
+            import Scripts.FlyBrid.flappy
+            Scripts.FlyBrid.flappy.runGame()
         except:
             pass 
 

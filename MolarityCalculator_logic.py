@@ -28,7 +28,7 @@ PyQt5:
 import MolarityCalculator_ui  # 导入ui.py创建的类
 
 
-class QMolarityCalculator(QtWidgets.QWidget):
+class QMolarityCalculator(QtWidgets.QDialog):
     '''
     LocalBlastGUI逻辑部分
     '''
@@ -40,12 +40,14 @@ class QMolarityCalculator(QtWidgets.QWidget):
 
 ##  ===============================有connectSlotsByName()自动关联的槽函数===============================
     @QtCore.pyqtSlot()
-    def on_pushButton_6_clicked(self):
-        self.ui.spinBox.setValue(2) # cpu threads -> 2
-        self.ui.spinBox_2.setValue(1) # max_hsps -> 1
-        self.ui.spinBox_3.setValue(1) # num_aligments -> 1
-        self.ui.doubleSpinBox_4.setValue(0.00001) # Evlaue -> 0.00001
-        self.ui.spinBox_5.setValue(6) # outfmt -> 6
+    def on_pushButton_clicked(self):
+        try:
+            m = self.ui.lineEdit.text()
+            c = self.ui.lineEdit_2.text()
+            v = self.ui.lineEdit_3.text()
+            mw = self.ui.lineEdit_4.text()
+        except:
+            QtWidgets.QMessageBox.warning(self, "错误", "不能为空！")
 
 if __name__ == "__main__":
     '''
