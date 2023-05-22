@@ -26,6 +26,7 @@ PyQt5:
 '''
 import LocalBlastGUI_logic
 import LigationCalculator_logic
+import MolarityCalculator_logic
 
 # =============================================================================
 # 编译openBMP.ui至py文件
@@ -71,7 +72,13 @@ class QmyMianWindow(QtWidgets.QMainWindow):  # 使用单继承的方式进行操
         '''
         print(f"删除index为{index}的tabWidget窗口")
         self.ui.tabWidget.widget(index).close()
+
+    @QtCore.pyqtSlot()
+    def on_actionMolarity_calculator_triggered(self):
+        MolarityCalculator = MolarityCalculator_logic.QMolarityCalculator(self)
+        MolarityCalculator.show()
         
+
     @QtCore.pyqtSlot()
     def on_actionLigation_Calculator_triggered(self):
         LigationCalculator = LigationCalculator_logic.QLigationCalculator(self)

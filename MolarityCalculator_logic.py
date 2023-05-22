@@ -41,13 +41,50 @@ class QMolarityCalculator(QtWidgets.QDialog):
 ##  ===============================有connectSlotsByName()自动关联的槽函数===============================
     @QtCore.pyqtSlot()
     def on_pushButton_clicked(self):
+        '''
+        m = c * v *mw
+        '''
         try:
-            m = self.ui.lineEdit.text()
-            c = self.ui.lineEdit_2.text()
-            v = self.ui.lineEdit_3.text()
-            mw = self.ui.lineEdit_4.text()
+            mRaw = self.ui.lineEdit.text()
+            cRaw = self.ui.lineEdit_2.text()
+            vRaw = self.ui.lineEdit_3.text()
+            mwRaw = self.ui.lineEdit_4.text()
+            
+            if not mRaw :
+                # m = float(mRaw)
+                c = float(cRaw)
+                v = float(vRaw)
+                mw = float(mwRaw)
+                self.ui.lineEdit.setText(str(c * v * mw))
+            elif not cRaw :
+                m = float(mRaw)
+                # c = float(cRaw)
+                v = float(vRaw)
+                mw = float(mwRaw)
+                self.ui.lineEdit_2.setText(str(m/(v * mw)))
+            elif not vRaw :
+                m = float(mRaw)
+                c = float(cRaw)
+                # v = float(vRaw)
+                mw = float(mwRaw)
+                self.ui.lineEdit_3.setText(str(m/(c * mw)))
+            elif not mwRaw :
+                m = float(mRaw)
+                c = float(cRaw)
+                v = float(vRaw)
+                # mw = float(mwRaw)
+                self.ui.lineEdit_4.setText(str(m/(c * v)))
+            else:
+                QtWidgets.QMessageBox.warning(self, "错误", "请重新输入！")
         except:
             QtWidgets.QMessageBox.warning(self, "错误", "不能为空！")
+            
+    @QtCore.pyqtSlot()
+    def on_pushButton_2_clicked(self):
+        self.ui.lineEdit.clear()
+        self.ui.lineEdit_2.clear()
+        self.ui.lineEdit_3.clear()
+        self.ui.lineEdit_4.clear()
 
 if __name__ == "__main__":
     '''

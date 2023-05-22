@@ -10,6 +10,11 @@
     <height>216</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Times New Roman</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>分子量计算器</string>
   </property>
@@ -39,6 +44,9 @@
         </item>
         <item>
          <widget class="QComboBox" name="comboBox_2">
+          <property name="currentText">
+           <string>g</string>
+          </property>
           <item>
            <property name="text">
             <string>kg</string>
@@ -140,6 +148,9 @@
         </item>
         <item>
          <widget class="QComboBox" name="comboBox_3">
+          <property name="currentText">
+           <string>mL</string>
+          </property>
           <item>
            <property name="text">
             <string>L</string>
