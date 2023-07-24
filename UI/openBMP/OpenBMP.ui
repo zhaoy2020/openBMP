@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>374</width>
-    <height>446</height>
+    <width>421</width>
+    <height>448</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -163,7 +163,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>374</width>
+     <width>421</width>
      <height>17</height>
     </rect>
    </property>
@@ -194,11 +194,12 @@
    </widget>
    <widget class="QMenu" name="menuOthers">
     <property name="title">
-     <string>Others</string>
+     <string>Tools</string>
     </property>
     <addaction name="actionColony_counter"/>
     <addaction name="actionMolarity_calculator"/>
     <addaction name="actionLigation_Calculator"/>
+    <addaction name="actionRename_ID"/>
    </widget>
    <widget class="QMenu" name="menuGames">
     <property name="title">
@@ -215,6 +216,11 @@
    </widget>
    <widget class="QMenu" name="menuHelp_2">
     <property name="title">
+     <string>Matplotlib</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp_3">
+    <property name="title">
      <string>Help</string>
     </property>
    </widget>
@@ -223,13 +229,14 @@
    <addaction name="menuKEGG"/>
    <addaction name="menuCOG"/>
    <addaction name="menuOthers"/>
-   <addaction name="menuGames"/>
-   <addaction name="menuHelp"/>
    <addaction name="menuHelp_2"/>
+   <addaction name="menuHelp"/>
+   <addaction name="menuGames"/>
+   <addaction name="menuHelp_3"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
+    <enum>RightToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
     <bool>false</bool>
@@ -295,6 +302,11 @@
   <action name="actionLigation_Calculator">
    <property name="text">
     <string>Ligation Calculator</string>
+   </property>
+  </action>
+  <action name="actionRename_ID">
+   <property name="text">
+    <string>Rename ID</string>
    </property>
   </action>
  </widget>

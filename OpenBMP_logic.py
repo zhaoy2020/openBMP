@@ -27,6 +27,7 @@ PyQt5:
 import LocalBlastGUI_logic
 import LigationCalculator_logic
 import MolarityCalculator_logic
+import RenameID_logic
 
 # =============================================================================
 # 编译openBMP.ui至py文件
@@ -83,6 +84,11 @@ class QmyMianWindow(QtWidgets.QMainWindow):  # 使用单继承的方式进行操
     def on_actionLigation_Calculator_triggered(self):
         LigationCalculator = LigationCalculator_logic.QLigationCalculator(self)
         LigationCalculator.show()
+
+    @QtCore.pyqtSlot()
+    def on_actionRename_ID_triggered(self):
+        RenameID = RenameID_logic.QRenameID(self)
+        RenameID.show()
 
 
     @QtCore.pyqtSlot()

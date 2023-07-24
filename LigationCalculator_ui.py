@@ -379,3 +379,4 @@ class Ui_LigationCalculator(object):
         self.label_39.setText(_translate("LigationCalculator", "0"))
         self.label_40.setText(_translate("LigationCalculator", "0"))
         self.label_41.setText(_translate("LigationCalculator", "0"))
+import picture_rc

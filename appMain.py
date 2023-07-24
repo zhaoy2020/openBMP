@@ -53,6 +53,14 @@ if False:
     # =============================================================================
     # 编译MolarityCalculator.ui至py文件
     # =============================================================================
+    uiName = "RenameID"
+    # 放在UI文件夹下面
+    uicmd = f'D:\ProgramFiles\miniconda3\python -m PyQt5.uic.pyuic UI/openBMP/{uiName}.ui -o {uiName}_ui.py'
+    os.system(uicmd)  # 先将UI文件转格式为py格式文件
+
+    # =============================================================================
+    # 编译MolarityCalculator.ui至py文件
+    # =============================================================================
     uiName = "MolarityCalculator"
     # 放在UI文件夹下面
     uicmd = f'D:\ProgramFiles\miniconda3\python -m PyQt5.uic.pyuic UI/openBMP/{uiName}.ui -o {uiName}_ui.py'

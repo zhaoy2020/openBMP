@@ -160,6 +160,8 @@ class Ui_OpenBMP(object):
         self.actionMolarity_calculator.setObjectName("actionMolarity_calculator")
         self.actionLigation_Calculator = QtWidgets.QAction(OpenBMP)
         self.actionLigation_Calculator.setObjectName("actionLigation_Calculator")
+        self.actionRename_ID = QtWidgets.QAction(OpenBMP)
+        self.actionRename_ID.setObjectName("actionRename_ID")
         self.menuBlast.addAction(self.actionLocal_Blast_GUI)
         self.menuBlast.addAction(self.actionExit_2)
         self.menuGO.addAction(self.actionIDmapping)
@@ -168,6 +170,7 @@ class Ui_OpenBMP(object):
         self.menuOthers.addAction(self.actionColony_counter)
         self.menuOthers.addAction(self.actionMolarity_calculator)
         self.menuOthers.addAction(self.actionLigation_Calculator)
+        self.menuOthers.addAction(self.actionRename_ID)
         self.menuGames.addAction(self.actionGomoku)
         self.menuGames.addAction(self.actionGreedy_Snake)
         self.menuGames.addAction(self.actionAngry_Birds)
@@ -196,7 +199,7 @@ class Ui_OpenBMP(object):
         self.menuGO.setTitle(_translate("OpenBMP", "GO"))
         self.menuKEGG.setTitle(_translate("OpenBMP", "KEGG"))
         self.menuCOG.setTitle(_translate("OpenBMP", "COG"))
-        self.menuOthers.setTitle(_translate("OpenBMP", "Others"))
+        self.menuOthers.setTitle(_translate("OpenBMP", "Tools"))
         self.menuGames.setTitle(_translate("OpenBMP", "Games"))
         self.menuHelp.setTitle(_translate("OpenBMP", "Qiime2"))
         self.menuHelp_2.setTitle(_translate("OpenBMP", "Help"))
@@ -213,4 +216,5 @@ class Ui_OpenBMP(object):
         self.actionMolarity_calculator.setText(_translate("OpenBMP", "Molarity calculator\n"
 ""))
         self.actionLigation_Calculator.setText(_translate("OpenBMP", "Ligation Calculator"))
+        self.actionRename_ID.setText(_translate("OpenBMP", "Rename ID"))
 import picture_rc

@@ -29,19 +29,28 @@ SOURCES += \
         OpenBMP.cpp \
     LocalBlastGUI.cpp \
     MolarityCalculator.cpp \
-    LigationCalculator.cpp
+    LigationCalculator.cpp \
+    RenameID.cpp \
+    Test.cpp \
+    CameraFace.cpp
 
 HEADERS += \
         OpenBMP.h \
     LocalBlastGUI.h \
     MolarityCalculator.h \
-    LigationCalculator.h
+    LigationCalculator.h \
+    RenameID.h \
+    Test.h \
+    CameraFace.h
 
 FORMS += \
         OpenBMP.ui \
     LocalBlastGUI.ui \
     MolarityCalculator.ui \
-    LigationCalculator.ui
+    LigationCalculator.ui \
+    RenameID.ui \
+    Test.ui \
+    CameraFace.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
