@@ -32,7 +32,8 @@ SOURCES += \
     LigationCalculator.cpp \
     RenameID.cpp \
     Test.cpp \
-    CameraFace.cpp
+    CameraFace.cpp \
+    amplicon.cpp
 
 HEADERS += \
         OpenBMP.h \
@@ -41,7 +42,8 @@ HEADERS += \
     LigationCalculator.h \
     RenameID.h \
     Test.h \
-    CameraFace.h
+    CameraFace.h \
+    amplicon.h
 
 FORMS += \
         OpenBMP.ui \
@@ -50,7 +52,8 @@ FORMS += \
     LigationCalculator.ui \
     RenameID.ui \
     Test.ui \
-    CameraFace.ui
+    CameraFace.ui \
+    amplicon.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

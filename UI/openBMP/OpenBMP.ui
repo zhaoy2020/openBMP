@@ -176,30 +176,29 @@
    </widget>
    <widget class="QMenu" name="menuGO">
     <property name="title">
-     <string>GO</string>
+     <string>Annotation</string>
     </property>
-    <addaction name="actionIDmapping"/>
+    <widget class="QMenu" name="menuIDmapping">
+     <property name="title">
+      <string>GO</string>
+     </property>
+     <addaction name="actionIDmapping_2"/>
+     <addaction name="actionInterproscan_2"/>
+    </widget>
+    <addaction name="actionNr"/>
+    <addaction name="menuIDmapping"/>
     <addaction name="actionInterproscan"/>
-    <addaction name="actionEggnog"/>
-   </widget>
-   <widget class="QMenu" name="menuKEGG">
-    <property name="title">
-     <string>KEGG</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuCOG">
-    <property name="title">
-     <string>COG</string>
-    </property>
+    <addaction name="actionInterproscan_3"/>
    </widget>
    <widget class="QMenu" name="menuOthers">
     <property name="title">
-     <string>Tools</string>
+     <string>Toolbox</string>
     </property>
     <addaction name="actionColony_counter"/>
     <addaction name="actionMolarity_calculator"/>
     <addaction name="actionLigation_Calculator"/>
     <addaction name="actionRename_ID"/>
+    <addaction name="actionMatplotlib"/>
    </widget>
    <widget class="QMenu" name="menuGames">
     <property name="title">
@@ -211,26 +210,28 @@
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
-     <string>Qiime2</string>
+     <string>Amplicon</string>
     </property>
+    <addaction name="actionQiime2"/>
+    <addaction name="actionVsearch"/>
+    <addaction name="actionMothur"/>
    </widget>
    <widget class="QMenu" name="menuHelp_2">
     <property name="title">
-     <string>Matplotlib</string>
+     <string>Metagenome</string>
     </property>
    </widget>
    <widget class="QMenu" name="menuHelp_3">
     <property name="title">
      <string>Help</string>
     </property>
+    <addaction name="actionAbout_2"/>
    </widget>
+   <addaction name="menuOthers"/>
    <addaction name="menuBlast"/>
    <addaction name="menuGO"/>
-   <addaction name="menuKEGG"/>
-   <addaction name="menuCOG"/>
-   <addaction name="menuOthers"/>
-   <addaction name="menuHelp_2"/>
    <addaction name="menuHelp"/>
+   <addaction name="menuHelp_2"/>
    <addaction name="menuGames"/>
    <addaction name="menuHelp_3"/>
   </widget>
@@ -273,19 +274,9 @@
     <string>Exit</string>
    </property>
   </action>
-  <action name="actionIDmapping">
-   <property name="text">
-    <string>IDmapping</string>
-   </property>
-  </action>
   <action name="actionInterproscan">
    <property name="text">
-    <string>Interproscan</string>
-   </property>
-  </action>
-  <action name="actionEggnog">
-   <property name="text">
-    <string>Eggnog</string>
+    <string>KEGG</string>
    </property>
   </action>
   <action name="actionAbout">
@@ -307,6 +298,51 @@
   <action name="actionRename_ID">
    <property name="text">
     <string>Rename ID</string>
+   </property>
+  </action>
+  <action name="actionMatplotlib">
+   <property name="text">
+    <string>Matplotlib</string>
+   </property>
+  </action>
+  <action name="actionIDmapping_2">
+   <property name="text">
+    <string>IDmapping</string>
+   </property>
+  </action>
+  <action name="actionInterproscan_2">
+   <property name="text">
+    <string>Interproscan</string>
+   </property>
+  </action>
+  <action name="actionInterproscan_3">
+   <property name="text">
+    <string>EggNOG</string>
+   </property>
+  </action>
+  <action name="actionNr">
+   <property name="text">
+    <string>Nr</string>
+   </property>
+  </action>
+  <action name="actionQiime2">
+   <property name="text">
+    <string>Qiime2</string>
+   </property>
+  </action>
+  <action name="actionVsearch">
+   <property name="text">
+    <string>Vsearch</string>
+   </property>
+  </action>
+  <action name="actionMothur">
+   <property name="text">
+    <string>Mothur</string>
+   </property>
+  </action>
+  <action name="actionAbout_2">
+   <property name="text">
+    <string>About</string>
    </property>
   </action>
  </widget>

@@ -24,6 +24,7 @@ PyQt5:
         QObject
     QtGui
 '''
+
 import LocalBlastGUI_logic
 import LigationCalculator_logic
 import MolarityCalculator_logic
@@ -42,18 +43,18 @@ import OpenBMP_ui  # 导入ui.py创建的类
 # =============================================================================
 # 编写逻辑部分
 # =============================================================================
-class QmyMianWindow(QtWidgets.QMainWindow):  # 使用单继承的方式进行操作
+class QmyMianWindow(QtWidgets.QMainWindow):             # 使用单继承的方式进行操作
     '''
     主界面
     '''
     def __init__(self, parent=None):
-        super().__init__(parent)  # 初始化QtWidgets.QMainWindow这个父类的__init__方法,此时self就变成了QtWidgets.QMainWindow这个父类了
-        self.ui = OpenBMP_ui.Ui_OpenBMP()  # 创建UI对象（实例化对象）
-        self.ui.setupUi(self)  # 构造UI，记得传self(QtWidgets.QMainWindow)
+        super().__init__(parent)                        # 初始化QtWidgets.QMainWindow这个父类的__init__方法,此时self就变成了QtWidgets.QMainWindow这个父类了
+        self.ui = OpenBMP_ui.Ui_OpenBMP()               # 创建UI对象（实例化对象）
+        self.ui.setupUi(self)                           # 构造UI，记得传self(QtWidgets.QMainWindow)
 
-        self.ui.label_2.setOpenExternalLinks(True)  # 超链接至Github openBMP项目上
+        self.ui.label_2.setOpenExternalLinks(True)      # 超链接至Github openBMP项目上
 
-##  ===============================有connectSlotsByName()自动关联的槽函数===============================
+#  ===============================有connectSlotsByName()自动关联的槽函数===============================
     @QtCore.pyqtSlot()
     def on_actionLocal_Blast_GUI_triggered(self):
         '''
@@ -93,33 +94,44 @@ class QmyMianWindow(QtWidgets.QMainWindow):  # 使用单继承的方式进行操
 
     @QtCore.pyqtSlot()
     def on_actionGomoku_triggered(self):
-        print('This is a test.')
+        print('Start Gomoku.')
         try:
-            # os.popen(f'python ./Scripts/Gomoku.py')
-            import Scripts.Gomoku
-            Scripts.Gomoku.runGame()
+            # os.popen(f'python ./Scripts/Gomoku.py')               # 方法3
+            # outBtypes = subprocess.check_output(['python', './Scripts/Gomoku.py'], stderr=subprocess.STDOUT)
+            # print(outBtypes.decode('gbk'))                        # 方法2
+            from Scripts import Gomoku
+            Gomoku.runGame()                                        # 方法1
+            # from concurrent.futures import ProcessPoolExecutor    # 方法4，开多进程池。结果仍然只能开一个程序
+            # with ProcessPoolExecutor() as pool:
+            #     pool.map(Gomoku.runGame())
         except:
-            pass 
+            # QtWidgets.QMessageBox.warning(self, "错误", "执行错误！")
+            pass
 
     @QtCore.pyqtSlot()
     def on_actionGreedy_Snake_triggered(self):
-        print('This is a test.')
+        print('Start Snake.')
         try:
             # os.popen(f'python ./Scripts/Snake.py')
-            import Scripts.Snake
-            Scripts.Snake.runGame()
+            from Scripts import Snake
+            Snake.runGame()
         except:
-            pass 
+            # QtWidgets.QMessageBox.warning(self, "错误", "执行错误！")
+            pass
 
     @QtCore.pyqtSlot()
     def on_actionAngry_Birds_triggered(self):
-        print('This is a test.')
+        print('Start FlyBrid')
         try:
-            # os.popen(f'cd scripts/FlyBrid/ && python flappy.py')
-            import Scripts.FlyBrid.flappy
-            Scripts.FlyBrid.flappy.runGame()
+            os.popen(f'cd scripts/FlyBrid/ && python flappy.py')
+            # from Scripts.FlyBrid import flappy
+            # flappy.runGame()
         except:
-            pass 
+            # QtWidgets.QMessageBox.warning(self, "错误", "执行错误！")
+            pass
+
+#  ===============================自定义的槽函数===============================
+
 
 if __name__ == "__main__":
     '''
@@ -131,7 +143,7 @@ if __name__ == "__main__":
     '''
     app = QtWidgets.QApplication(sys.argv)  # 第一步创建GUI应用程序，固定步骤
 
-    window = QmyMianWindow()  # 第二步在应用上创建主窗口
-    window.show()  # 显示主窗口所有内容
+    window = QmyMianWindow()                # 第二步在应用上创建主窗口
+    window.show()                           # 显示主窗口所有内容
 
-    sys.exit(app.exec_())  # 执行应用循环，固定步骤
+    sys.exit(app.exec_())                   # 执行应用循环，固定步骤

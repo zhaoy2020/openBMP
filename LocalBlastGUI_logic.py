@@ -52,7 +52,6 @@ class QLocalBlastGUI(QtWidgets.QWidget):
     LocalBlastGUI逻辑部分
     '''
     def __init__(self, parent=None):
-        
         super().__init__(parent) # 继承QtWidgets.QWidget
         self.ui = LocalBlastGUI_ui.Ui_LocalBlastGUI()
         self.ui.setupUi(self)
@@ -75,11 +74,11 @@ class QLocalBlastGUI(QtWidgets.QWidget):
 ##  ===============================有connectSlotsByName()自动关联的槽函数===============================
     @QtCore.pyqtSlot()
     def on_pushButton_6_clicked(self):
-        self.ui.spinBox.setValue(2) # cpu threads -> 2
-        self.ui.spinBox_2.setValue(1) # max_hsps -> 1
-        self.ui.spinBox_3.setValue(1) # num_aligments -> 1
-        self.ui.doubleSpinBox_4.setValue(0.00001) # Evlaue -> 0.00001
-        self.ui.spinBox_5.setValue(6) # outfmt -> 6
+        self.ui.spinBox.setValue(2)                     # cpu threads -> 2
+        self.ui.spinBox_2.setValue(1)                   # max_hsps -> 1
+        self.ui.spinBox_3.setValue(1)                   # num_aligments -> 1
+        self.ui.doubleSpinBox_4.setValue(0.00001)       # Evlaue -> 0.00001
+        self.ui.spinBox_5.setValue(6)                   # outfmt -> 6
 
     @QtCore.pyqtSlot()
     def on_pushButton_clicked(self):
@@ -153,7 +152,7 @@ if __name__ == "__main__":
     '''
     app = QtWidgets.QApplication(sys.argv)  # 第一步创建GUI应用程序，固定步骤
 
-    window = QLocalBlastGUI()  # 第二步在应用上创建主窗口
-    window.show()  # 显示主窗口所有内容
+    window = QLocalBlastGUI()               # 第二步在应用上创建主窗口
+    window.show()                           # 显示主窗口所有内容
 
-    sys.exit(app.exec_())  # 执行应用循环，固定步骤
+    sys.exit(app.exec_())                   # 执行应用循环，固定步骤
