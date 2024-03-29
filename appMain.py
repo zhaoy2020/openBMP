@@ -26,7 +26,8 @@ PyQt5:
 '''
 
 
-import OpenBMP_logic
+import Main.OpenBMP_logic as OpenBMP_logic
+print(f'注意这是{__name__}整个程序的入口位置：{os.getcwd()}')   # 很重要
 
 
 

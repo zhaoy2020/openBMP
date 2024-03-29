@@ -16,7 +16,7 @@ if True:
     # =============================================================================
     uiName = "OpenBMP"
     # 放在UI文件夹下面
-    uicmd = f'D:\ProgramFiles\miniconda3\python -m PyQt5.uic.pyuic UI/openBMP/{uiName}.ui -o {uiName}_ui.py'
+    uicmd = f'D:\ProgramFiles\miniconda3\python -m PyQt5.uic.pyuic UI/openBMP/{uiName}.ui -o Main/{uiName}_ui.py'
     os.system(uicmd)  # 先将UI文件转格式为py格式文件
     
     # =============================================================================

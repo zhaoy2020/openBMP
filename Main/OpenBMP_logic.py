@@ -33,7 +33,8 @@ import Annotation.PGAP.PGAP_logic as PGAP_logic
 import ToolBox.Matplotlib.Matplotlib_logic as Matplotlib_logic
 import ToolBox.MarkPDF.MarkPDF_logic as MarkPDF_logic
 
-import OpenBMP_ui  # 导入ui.py创建的类
+# import OpenBMP_ui  # 导入ui.py创建的类
+from Main import OpenBMP_ui
 
 
 # =============================================================================
