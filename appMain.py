@@ -17,6 +17,7 @@ PyQt5:
         QMainWindow             # 窗体
         QLabel
         QFileDialog             # 对话框
+        QMessageBox             # 消息框
     QtCore:
         pyqtSignal              # 信号函数
         pyqtSlot                # 槽函数

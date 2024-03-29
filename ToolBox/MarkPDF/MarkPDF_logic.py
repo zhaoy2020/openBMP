@@ -69,18 +69,21 @@ class QMarkPDF(QtWidgets.QMainWindow):
 
     @QtCore.pyqtSlot()
     def on_pushButton_clicked(self):
-        # self.mark_in_pdf()
-        # print(self.inputDir)
-        # print(self.outputDir)
-        # print(self.ui.textEdit.toPlainText())
-        query_line = self.ui.textEdit.toPlainText()
-        query_list = query_line.split(";")
-        print('='*100)
-        print("标记关键词为：", query_list)
-        print('+'*100)
-        self.walk(input_dir=self.inputDir, query_list=query_list, output_dir=self.outputDir)
-        print('='*100)
-        print('标记文件保存至MatchPDF文件夹中')
+        try:
+            # self.mark_in_pdf()
+            # print(self.inputDir)
+            # print(self.outputDir)
+            # print(self.ui.textEdit.toPlainText())
+            query_line = self.ui.textEdit.toPlainText()
+            query_list = query_line.split(";")
+            print('='*100)
+            print("标记关键词为：", query_list)
+            print('+'*100)
+            self.walk(input_dir=self.inputDir, query_list=query_list, output_dir=self.outputDir)
+            print('='*100)
+            print('标记文件保存至MatchPDF文件夹中')
+        except:
+            QtWidgets.QMessageBox.warning(self, "错误", "运行错误！")
 
     @QtCore.pyqtSlot()
     def on_pushButton_2_clicked(self):
