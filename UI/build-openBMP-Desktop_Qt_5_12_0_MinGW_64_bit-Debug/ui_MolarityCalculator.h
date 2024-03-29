@@ -28,10 +28,6 @@ class Ui_MolarityCalculator
 {
 public:
     QVBoxLayout *verticalLayout_2;
-    QGroupBox *groupBox;
-    QHBoxLayout *horizontalLayout_6;
-    QLabel *label;
-    QLabel *label_9;
     QGroupBox *groupBox_2;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
@@ -50,10 +46,12 @@ public:
     QComboBox *comboBox_3;
     QLabel *label_4;
     QHBoxLayout *horizontalLayout_4;
+    QLabel *label;
+    QLineEdit *lineEdit_5;
+    QPushButton *pushButton_3;
     QLabel *label_8;
     QLineEdit *lineEdit_4;
     QComboBox *comboBox_4;
-    QPushButton *pushButton_3;
     QHBoxLayout *horizontalLayout_5;
     QSpacerItem *horizontalSpacer;
     QPushButton *pushButton;
@@ -65,27 +63,15 @@ public:
     {
         if (MolarityCalculator->objectName().isEmpty())
             MolarityCalculator->setObjectName(QString::fromUtf8("MolarityCalculator"));
-        MolarityCalculator->resize(358, 426);
+        MolarityCalculator->resize(308, 216);
+        QFont font;
+        font.setFamily(QString::fromUtf8("Times New Roman"));
+        MolarityCalculator->setFont(font);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/icons/images/DNA.svg"), QSize(), QIcon::Normal, QIcon::On);
+        MolarityCalculator->setWindowIcon(icon);
         verticalLayout_2 = new QVBoxLayout(MolarityCalculator);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        groupBox = new QGroupBox(MolarityCalculator);
-        groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        horizontalLayout_6 = new QHBoxLayout(groupBox);
-        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
-        label = new QLabel(groupBox);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setAlignment(Qt::AlignCenter);
-
-        horizontalLayout_6->addWidget(label);
-
-        label_9 = new QLabel(groupBox);
-        label_9->setObjectName(QString::fromUtf8("label_9"));
-
-        horizontalLayout_6->addWidget(label_9);
-
-
-        verticalLayout_2->addWidget(groupBox);
-
         groupBox_2 = new QGroupBox(MolarityCalculator);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
         verticalLayout = new QVBoxLayout(groupBox_2);
@@ -183,6 +169,34 @@ public:
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        label = new QLabel(groupBox_2);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        horizontalLayout_4->addWidget(label);
+
+        lineEdit_5 = new QLineEdit(groupBox_2);
+        lineEdit_5->setObjectName(QString::fromUtf8("lineEdit_5"));
+
+        horizontalLayout_4->addWidget(lineEdit_5);
+
+        pushButton_3 = new QPushButton(groupBox_2);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        pushButton_3->setEnabled(true);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
+        pushButton_3->setSizePolicy(sizePolicy);
+        QFont font1;
+        font1.setPointSize(9);
+        pushButton_3->setFont(font1);
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/icons/images/save.svg"), QSize(), QIcon::Normal, QIcon::On);
+        pushButton_3->setIcon(icon1);
+        pushButton_3->setIconSize(QSize(12, 12));
+
+        horizontalLayout_4->addWidget(pushButton_3);
+
         label_8 = new QLabel(groupBox_2);
         label_8->setObjectName(QString::fromUtf8("label_8"));
 
@@ -198,16 +212,6 @@ public:
         comboBox_4->setObjectName(QString::fromUtf8("comboBox_4"));
 
         horizontalLayout_4->addWidget(comboBox_4);
-
-        pushButton_3 = new QPushButton(groupBox_2);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setEnabled(true);
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/icons/images/save.svg"), QSize(), QIcon::Normal, QIcon::On);
-        pushButton_3->setIcon(icon);
-        pushButton_3->setIconSize(QSize(12, 12));
-
-        horizontalLayout_4->addWidget(pushButton_3);
 
 
         verticalLayout->addLayout(horizontalLayout_4);
@@ -250,10 +254,7 @@ public:
 
     void retranslateUi(QWidget *MolarityCalculator)
     {
-        MolarityCalculator->setWindowTitle(QApplication::translate("MolarityCalculator", "Form", nullptr));
-        groupBox->setTitle(QApplication::translate("MolarityCalculator", "\346\217\217\350\277\260", nullptr));
-        label->setText(QApplication::translate("MolarityCalculator", "<html><head/><body><p><img src=\":/icons/images/DNA.svg\"/></p></body></html>", nullptr));
-        label_9->setText(QApplication::translate("MolarityCalculator", "<html><head/><body><p><span style=\" font-size:6pt;\">\346\234\254\350\256\241\347\256\227\345\231\250\345\217\257\345\270\256\345\212\251\346\202\250\350\256\241\347\256\227\345\207\272\347\211\271\345\256\232\346\272\266\346\266\262\344\270\255\346\272\266\350\264\250\347\232\204\350\264\250\351\207\217\343\200\201\346\272\266\346\266\262\346\265\223\345\272\246\345\222\214\344\275\223\347\247\257\344\271\213\351\227\264\347\232\204\345\205\263\347\263\273\357\274\214\345\205\254\345\274\217\344\270\272\357\274\232</span></p></body></html>", nullptr));
+        MolarityCalculator->setWindowTitle(QApplication::translate("MolarityCalculator", "\345\210\206\345\255\220\351\207\217\350\256\241\347\256\227\345\231\250", nullptr));
         groupBox_2->setTitle(QApplication::translate("MolarityCalculator", "\345\267\245\344\275\234\345\214\272", nullptr));
         label_5->setText(QApplication::translate("MolarityCalculator", "\350\264\250\351\207\217", nullptr));
         comboBox_2->setItemText(0, QApplication::translate("MolarityCalculator", "kg", nullptr));
@@ -262,6 +263,7 @@ public:
         comboBox_2->setItemText(3, QApplication::translate("MolarityCalculator", "\316\274g", nullptr));
         comboBox_2->setItemText(4, QApplication::translate("MolarityCalculator", "ng", nullptr));
 
+        comboBox_2->setCurrentText(QApplication::translate("MolarityCalculator", "g", nullptr));
         label_2->setText(QApplication::translate("MolarityCalculator", "=", nullptr));
         label_6->setText(QApplication::translate("MolarityCalculator", "\346\265\223\345\272\246", nullptr));
         comboBox->setItemText(0, QApplication::translate("MolarityCalculator", "M", nullptr));
@@ -276,11 +278,13 @@ public:
         comboBox_3->setItemText(2, QApplication::translate("MolarityCalculator", "\316\274L", nullptr));
         comboBox_3->setItemText(3, QApplication::translate("MolarityCalculator", "nL", nullptr));
 
+        comboBox_3->setCurrentText(QApplication::translate("MolarityCalculator", "mL", nullptr));
         label_4->setText(QApplication::translate("MolarityCalculator", "X", nullptr));
+        label->setText(QApplication::translate("MolarityCalculator", "\347\211\251\350\264\250\345\220\215", nullptr));
+        pushButton_3->setText(QApplication::translate("MolarityCalculator", "\350\256\260\345\275\225\347\211\251\350\264\250", nullptr));
         label_8->setText(QApplication::translate("MolarityCalculator", "\345\210\206\345\255\220\351\207\217", nullptr));
         comboBox_4->setItemText(0, QApplication::translate("MolarityCalculator", "g/mol", nullptr));
 
-        pushButton_3->setText(QApplication::translate("MolarityCalculator", "\350\256\260\345\275\225\347\211\251\350\264\250", nullptr));
         pushButton->setText(QApplication::translate("MolarityCalculator", "\350\256\241\347\256\227", nullptr));
         pushButton_2->setText(QApplication::translate("MolarityCalculator", "\351\207\215\347\275\256", nullptr));
     } // retranslateUi

@@ -25,18 +25,14 @@ PyQt5:
     QtGui
 '''
 
-import LocalBlastGUI_logic
-import LigationCalculator_logic
-import MolarityCalculator_logic
-import RenameID_logic
+import Blast.BlastGUI.LocalBlastGUI_logic as LocalBlastGUI_logic
+import ToolBox.LigationCalculator.LigationCalculator_logic as LigationCalculator_logic
+import ToolBox.MolarityCalculator.MolarityCalculator_logic as MolarityCalculator_logic
+import ToolBox.RenameID.RenameID_logic as RenameID_logic
+import Annotation.PGAP.PGAP_logic as PGAP_logic 
+import ToolBox.Matplotlib.Matplotlib_logic as Matplotlib_logic
+import ToolBox.MarkPDF.MarkPDF_logic as MarkPDF_logic
 
-# =============================================================================
-# 编译openBMP.ui至py文件
-# =============================================================================
-# uiName = "OpenBMP"
-# # 放在UI文件夹下面
-# uicmd = f'D:\ProgramFiles\miniconda3\python -m PyQt5.uic.pyuic UI/openBMP/{uiName}.ui -o {uiName}_ui.py'
-# os.system(uicmd)  # 先将UI文件转格式为py格式文件
 import OpenBMP_ui  # 导入ui.py创建的类
 
 
@@ -91,6 +87,27 @@ class QmyMianWindow(QtWidgets.QMainWindow):             # 使用单继承的方�
         RenameID = RenameID_logic.QRenameID(self)
         RenameID.show()
 
+    @QtCore.pyqtSlot()
+    def on_actionMatplotlib_triggered(self):
+        matplotlibFigure = Matplotlib_logic.QMatplotlib(self)
+        matplotlibFigure.show()
+
+    @QtCore.pyqtSlot()
+    def on_actionMarkPDF_triggered(self):
+        markPDF = MarkPDF_logic.QMarkPDF(self)
+        markPDF.show()
+
+    @QtCore.pyqtSlot()
+    def on_actionPGAP_triggered(self):
+        '''open NCBI Prokaryotic Genome Annotation Pipeline window'''
+        PGAP = PGAP_logic.QPGAP(self)
+        PGAP.show()
+
+    @QtCore.pyqtSlot()
+    def on_actionQiime2_triggered(self):
+        from Amplicon.Qiime import amplicon_logic
+        qiime = amplicon_logic.QAmplicon(self)
+        qiime.show()
 
     @QtCore.pyqtSlot()
     def on_actionGomoku_triggered(self):

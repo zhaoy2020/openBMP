@@ -189,6 +189,7 @@
     <addaction name="menuIDmapping"/>
     <addaction name="actionInterproscan"/>
     <addaction name="actionInterproscan_3"/>
+    <addaction name="actionPGAP"/>
    </widget>
    <widget class="QMenu" name="menuOthers">
     <property name="title">
@@ -199,6 +200,7 @@
     <addaction name="actionLigation_Calculator"/>
     <addaction name="actionRename_ID"/>
     <addaction name="actionMatplotlib"/>
+    <addaction name="actionMarkPDF"/>
    </widget>
    <widget class="QMenu" name="menuGames">
     <property name="title">
@@ -343,6 +345,16 @@
   <action name="actionAbout_2">
    <property name="text">
     <string>About</string>
+   </property>
+  </action>
+  <action name="actionPGAP">
+   <property name="text">
+    <string>PGAP</string>
+   </property>
+  </action>
+  <action name="actionMarkPDF">
+   <property name="text">
+    <string>MarkPDF</string>
    </property>
   </action>
  </widget>

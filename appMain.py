@@ -11,77 +11,20 @@ from PyQt5 import QtWidgets, QtCore, QtGui
 '''
 PyQt5:
     QtWidgets:
-        QApplication
-        QWidget
-        QDialog
-        QMainWindow
+        QApplication            # 应用程序
+        QWidget                 # 窗体
+        QDialog                 # 窗体
+        QMainWindow             # 窗体
         QLabel
-        QFileDialog
+        QFileDialog             # 对话框
     QtCore:
-        pyqtSignal
-        pyqtSlot
-        Qt
+        pyqtSignal              # 信号函数
+        pyqtSlot                # 槽函数
+        Qt                      # 菜单控件
         QObject
     QtGui
 '''
 
-if False:
-    # ====================================先将resource相关文件进行编译=======================================
-    # =============================================================================
-    # 编译resuource文件至py
-    # =============================================================================
-    resName = 'picture'
-    rescmd = f"D:\ProgramFiles\miniconda3\Scripts\pyrcc5.exe UI/openBMP/{resName}.qrc -o {resName}_rc.py"
-    os.system(rescmd)
-    
-    # =============================================================================
-    # 编译openBMP.ui至py文件
-    # =============================================================================
-    uiName = "OpenBMP"
-    # 放在UI文件夹下面
-    uicmd = f'D:\ProgramFiles\miniconda3\python -m PyQt5.uic.pyuic UI/openBMP/{uiName}.ui -o {uiName}_ui.py'
-    os.system(uicmd)  # 先将UI文件转格式为py格式文件
-    
-    # =============================================================================
-    # 编译LocalBlastGUI.ui至py文件
-    # =============================================================================
-    uiName = "LocalBlastGUI"
-    # 放在UI文件夹下面
-    uicmd = f'D:\ProgramFiles\miniconda3\python -m PyQt5.uic.pyuic UI/openBMP/{uiName}.ui -o {uiName}_ui.py'
-    os.system(uicmd)  # 先将UI文件转格式为py格式文件
-
-    # =============================================================================
-    # 编译MolarityCalculator.ui至py文件
-    # =============================================================================
-    uiName = "RenameID"
-    # 放在UI文件夹下面
-    uicmd = f'D:\ProgramFiles\miniconda3\python -m PyQt5.uic.pyuic UI/openBMP/{uiName}.ui -o {uiName}_ui.py'
-    os.system(uicmd)  # 先将UI文件转格式为py格式文件
-
-    # =============================================================================
-    # 编译MolarityCalculator.ui至py文件
-    # =============================================================================
-    uiName = "MolarityCalculator"
-    # 放在UI文件夹下面
-    uicmd = f'D:\ProgramFiles\miniconda3\python -m PyQt5.uic.pyuic UI/openBMP/{uiName}.ui -o {uiName}_ui.py'
-    os.system(uicmd)  # 先将UI文件转格式为py格式文件
-    
-    # =============================================================================
-    # 编译LigationCalculator.ui至py文件
-    # =============================================================================
-    uiName = "LigationCalculator"
-    # 放在UI文件夹下面
-    uicmd = f'D:\ProgramFiles\miniconda3\python -m PyQt5.uic.pyuic UI/openBMP/{uiName}.ui -o {uiName}_ui.py'
-    os.system(uicmd)  # 先将UI文件转格式为py格式文件
-    
-    # =============================================================================
-    # 编译amplicon.ui至py文件
-    # =============================================================================
-    uiName = "amplicon"
-    # 放在UI文件夹下面
-    uicmd = f'D:\ProgramFiles\miniconda3\python -m PyQt5.uic.pyuic UI/openBMP/{uiName}.ui -o {uiName}_ui.py'
-    os.system(uicmd)  # 先将UI文件转格式为py格式文件
-    
 
 import OpenBMP_logic
 
@@ -98,6 +41,6 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)  # 第一步创建GUI应用程序，固定步骤
 
     window = OpenBMP_logic.QmyMianWindow()  # 第二步在应用上创建主窗口
-    window.show()  # 显示主窗口所有内容
+    window.show()                           # 显示主窗口所有内容
     
-    sys.exit(app.exec_())  # 执行应用循环，固定步骤
+    sys.exit(app.exec_())                   # 执行应用循环，固定步骤

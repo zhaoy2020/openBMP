@@ -88,6 +88,7 @@ public:
 
         lineEdit = new QLineEdit(groupBox);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setDragEnabled(true);
 
         gridLayout->addWidget(lineEdit, 0, 1, 1, 1);
 
@@ -103,6 +104,7 @@ public:
 
         lineEdit_2 = new QLineEdit(groupBox);
         lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setDragEnabled(true);
 
         gridLayout->addWidget(lineEdit_2, 1, 1, 1, 1);
 
@@ -118,6 +120,7 @@ public:
 
         lineEdit_3 = new QLineEdit(groupBox);
         lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        lineEdit_3->setDragEnabled(true);
 
         gridLayout->addWidget(lineEdit_3, 2, 1, 1, 1);
 

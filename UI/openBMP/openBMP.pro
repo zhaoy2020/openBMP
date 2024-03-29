@@ -33,7 +33,11 @@ SOURCES += \
     RenameID.cpp \
     Test.cpp \
     CameraFace.cpp \
-    amplicon.cpp
+    amplicon.cpp \
+    Matplotlib.cpp \
+    PGAP.cpp \
+    SciHub.cpp \
+    MarkPDF.cpp
 
 HEADERS += \
         OpenBMP.h \
@@ -43,7 +47,11 @@ HEADERS += \
     RenameID.h \
     Test.h \
     CameraFace.h \
-    amplicon.h
+    amplicon.h \
+    Matplotlib.h \
+    PGAP.h \
+    SciHub.h \
+    MarkPDF.h
 
 FORMS += \
         OpenBMP.ui \
@@ -53,7 +61,11 @@ FORMS += \
     RenameID.ui \
     Test.ui \
     CameraFace.ui \
-    amplicon.ui
+    amplicon.ui \
+    Matplotlib.ui \
+    PGAP.ui \
+    SciHub.ui \
+    MarkPDF.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
