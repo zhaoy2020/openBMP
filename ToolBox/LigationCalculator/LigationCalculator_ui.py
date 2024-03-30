@@ -327,7 +327,7 @@ class Ui_LigationCalculator(object):
 
     def retranslateUi(self, LigationCalculator):
         _translate = QtCore.QCoreApplication.translate
-        LigationCalculator.setWindowTitle(_translate("LigationCalculator", "Ligation Calculator by ZhaoYu"))
+        LigationCalculator.setWindowTitle(_translate("LigationCalculator", "Ligation Calculator"))
         self.groupBox_2.setTitle(_translate("LigationCalculator", "Insert DNA"))
         self.label_2.setText(_translate("LigationCalculator", "Insert DNA length"))
         self.comboBox_2.setItemText(0, _translate("LigationCalculator", "kb"))

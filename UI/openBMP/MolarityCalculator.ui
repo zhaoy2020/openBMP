@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>308</width>
-    <height>216</height>
+    <height>219</height>
    </rect>
   </property>
   <property name="font">
@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>分子量计算器</string>
+   <string>MW</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -45,7 +45,7 @@
         <item>
          <widget class="QComboBox" name="comboBox_2">
           <property name="currentText">
-           <string>g</string>
+           <string>kg</string>
           </property>
           <item>
            <property name="text">
@@ -149,7 +149,7 @@
         <item>
          <widget class="QComboBox" name="comboBox_3">
           <property name="currentText">
-           <string>mL</string>
+           <string>L</string>
           </property>
           <item>
            <property name="text">

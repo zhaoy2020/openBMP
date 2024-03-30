@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MolarityCalculator(object):
     def setupUi(self, MolarityCalculator):
         MolarityCalculator.setObjectName("MolarityCalculator")
-        MolarityCalculator.resize(308, 216)
+        MolarityCalculator.resize(308, 219)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         MolarityCalculator.setFont(font)
@@ -145,10 +145,10 @@ class Ui_MolarityCalculator(object):
 
     def retranslateUi(self, MolarityCalculator):
         _translate = QtCore.QCoreApplication.translate
-        MolarityCalculator.setWindowTitle(_translate("MolarityCalculator", "分子量计算器"))
+        MolarityCalculator.setWindowTitle(_translate("MolarityCalculator", "MW"))
         self.groupBox_2.setTitle(_translate("MolarityCalculator", "工作区"))
         self.label_5.setText(_translate("MolarityCalculator", "质量"))
-        self.comboBox_2.setCurrentText(_translate("MolarityCalculator", "g"))
+        self.comboBox_2.setCurrentText(_translate("MolarityCalculator", "kg"))
         self.comboBox_2.setItemText(0, _translate("MolarityCalculator", "kg"))
         self.comboBox_2.setItemText(1, _translate("MolarityCalculator", "g"))
         self.comboBox_2.setItemText(2, _translate("MolarityCalculator", "mg"))
@@ -162,7 +162,7 @@ class Ui_MolarityCalculator(object):
         self.comboBox.setItemText(3, _translate("MolarityCalculator", "nM"))
         self.label_3.setText(_translate("MolarityCalculator", "X"))
         self.label_7.setText(_translate("MolarityCalculator", "体积"))
-        self.comboBox_3.setCurrentText(_translate("MolarityCalculator", "mL"))
+        self.comboBox_3.setCurrentText(_translate("MolarityCalculator", "L"))
         self.comboBox_3.setItemText(0, _translate("MolarityCalculator", "L"))
         self.comboBox_3.setItemText(1, _translate("MolarityCalculator", "mL"))
         self.comboBox_3.setItemText(2, _translate("MolarityCalculator", "μL"))

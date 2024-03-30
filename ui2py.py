@@ -10,7 +10,7 @@ if True:
     os.system(rescmd)
     # os.popen(rescmd)
 
-if True:
+if False:
     # =============================================================================
     # 编译openBMP.ui至py文件
     # =============================================================================
@@ -19,6 +19,7 @@ if True:
     uicmd = f'D:\ProgramFiles\miniconda3\python -m PyQt5.uic.pyuic UI/openBMP/{uiName}.ui -o Main/{uiName}_ui.py'
     os.system(uicmd)  # 先将UI文件转格式为py格式文件
     
+if True:
     # =============================================================================
     # 编译LocalBlastGUI.ui至py文件
     # =============================================================================
@@ -86,4 +87,4 @@ if True:
     print('编译中...')
 
 if __name__ == '__main__':
-    pass
+    print(f'编译完成。')
