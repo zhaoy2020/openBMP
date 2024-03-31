@@ -241,7 +241,7 @@ class Ui_OpenBMP(object):
         self.actionMolarity_calculator.setText(_translate("OpenBMP", "Molarity calculator\n"
 ""))
         self.actionLigation_Calculator.setText(_translate("OpenBMP", "Ligation Calculator"))
-        self.actionRename_ID.setText(_translate("OpenBMP", "Rename ID"))
+        self.actionRename_ID.setText(_translate("OpenBMP", "FastaKit"))
         self.actionMatplotlib.setText(_translate("OpenBMP", "Matplotlib"))
         self.actionIDmapping_2.setText(_translate("OpenBMP", "IDmapping"))
         self.actionInterproscan_2.setText(_translate("OpenBMP", "Interproscan"))

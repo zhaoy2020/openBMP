@@ -299,7 +299,7 @@
   </action>
   <action name="actionRename_ID">
    <property name="text">
-    <string>Rename ID</string>
+    <string>FastaKit</string>
    </property>
   </action>
   <action name="actionMatplotlib">

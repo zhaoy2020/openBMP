@@ -83,36 +83,49 @@ class QLocalBlastGUI(QtWidgets.QWidget):
 
     @QtCore.pyqtSlot()
     def on_pushButton_clicked(self):
-        curPath = os.getcwd()
-        self.DBFileName, DBflt = QtWidgets.QFileDialog.getOpenFileName(self, "选择DB路径", curPath, "文本文件(*.fasta;*.ffn;*.fnn;*.ffa;*.faa;*.fa);;所有文件(*.*)")
-        print(f"导入文件{self.DBFileName}")
-        print(f"文件类型为{DBflt}")
-        self.ui.textBrowser.append(f"导入文件{self.DBFileName}")
-        self.ui.textBrowser.append(f"文件类型为{DBflt}")
-        # self.ui.textBrowser.moveCursor(self.textBrowser.textCursor().End)
-        self.ui.lineEdit.setText(self.DBFileName)
+        '''DB fasta'''
+        try:
+            curPath = os.getcwd()
+            self.DBFileName, DBflt = QtWidgets.QFileDialog.getOpenFileName(self, "选择DB路径", curPath, "文本文件(*.fasta;*.ffn;*.fnn;*.ffa;*.faa;*.fa);;所有文件(*.*)")
+            print(f"导入文件{self.DBFileName}")
+            print(f"文件类型为{DBflt}")
+            self.ui.textBrowser.append(f"导入文件{self.DBFileName}")
+            self.ui.textBrowser.append(f"文件类型为{DBflt}")
+            # self.ui.textBrowser.moveCursor(self.textBrowser.textCursor().End)
+            self.ui.lineEdit.setText(self.DBFileName)
+        except:
+            pass
 
     @QtCore.pyqtSlot()
     def on_pushButton_2_clicked(self):
-        curPath = os.getcwd()
-        self.QueryFileName, flt = QtWidgets.QFileDialog.getOpenFileName(self, "选择Query路径", curPath, "文本文件(*.fasta;*.ffn;*.fnn;*.ffa;*.faa,*.fa);;所有文件(*.*)")
-        print(f"导入文件{self.QueryFileName}")
-        print(f"文件类型为{flt}")
-        self.ui.textBrowser.append(f"导入文件{self.QueryFileName}")
-        self.ui.textBrowser.append(f"文件类型为{flt}")
-        # self.ui.textBrowser.moveCursor(self.textBrowser.textCursor().End)
-        self.ui.lineEdit_2.setText(self.QueryFileName)
+        '''Query fasta'''
+        try:
+            curPath = os.getcwd()
+            self.QueryFileName, flt = QtWidgets.QFileDialog.getOpenFileName(self, "选择Query路径", curPath, "文本文件(*.fasta;*.ffn;*.fnn;*.ffa;*.faa,*.fa);;所有文件(*.*)")
+            print(f"导入文件{self.QueryFileName}")
+            print(f"文件类型为{flt}")
+            self.ui.textBrowser.append(f"导入文件{self.QueryFileName}")
+            self.ui.textBrowser.append(f"文件类型为{flt}")
+            # self.ui.textBrowser.moveCursor(self.textBrowser.textCursor().End)
+            self.ui.lineEdit_2.setText(self.QueryFileName)
+        except:
+            pass 
 
     @QtCore.pyqtSlot()
     def on_pushButton_3_clicked(self):
-        self.outputDir = QtWidgets.QFileDialog.getExistingDirectory(self, "选择输出路径")
-        print(f"输出文件位置{self.outputDir}")
-        self.ui.textBrowser.append(f"输出文件位置{self.outputDir}")
-        # self.ui.textBrowser.moveCursor(self.textBrowser.textCursor().End)
-        self.ui.lineEdit_3.setText(self.outputDir)
+        '''output dir.'''
+        try:
+            self.outputDir = QtWidgets.QFileDialog.getExistingDirectory(self, "选择输出路径")
+            print(f"输出文件位置{self.outputDir}")
+            self.ui.textBrowser.append(f"输出文件位置{self.outputDir}")
+            # self.ui.textBrowser.moveCursor(self.textBrowser.textCursor().End)
+            self.ui.lineEdit_3.setText(self.outputDir)
+        except:
+            pass 
 
     @QtCore.pyqtSlot()
     def on_pushButton_4_clicked(self):
+        '''DBformat'''
         try:
             makeDBcmd = f"\
                 makeblastdb.exe \
@@ -121,24 +134,25 @@ class QLocalBlastGUI(QtWidgets.QWidget):
                         -parse_seqids \
                                 -out {self.DBFileName.split('.')[0]}"
             print("start:\n",makeDBcmd)
+            os.system(makeDBcmd)
             self.ui.textBrowser.append(f"start: {makeDBcmd}")
             # self.ui.textBrowser.moveCursor(self.textBrowser.textCursor().End)
-            os.system(makeDBcmd)
         except :
             QtWidgets.QMessageBox.warning(self, "warining", "system errors")
 
 
     @QtCore.pyqtSlot()
     def on_pushButton_5_clicked(self):
+        '''blast'''
         try:
             if self.ui.spinBox_5.value() == 6:
-                blastcmd = f'''{self.ui.comboBox_2.currentText().split(" ")[0]} -num_threads {self.ui.spinBox.value()} -query {self.DBFileName} -db {self.DBFileName.split('.')[0]} -out {self.outputDir}{os.path.basename(self.QueryFileName).split('.')[0]}_results.txt -max_hsps {self.ui.spinBox_2.value()} -num_alignments {self.ui.spinBox_3.value()} -evalue {self.ui.doubleSpinBox_4.value()} -outfmt "{self.ui.spinBox_5.value()} qseqid sseqid sgi stitle evalue bitscore pident qcovs length mismatch gapopen qstart qend sstart send"'''
+                blastcmd = f'''{self.ui.comboBox_2.currentText().split(" ")[0]} -num_threads {self.ui.spinBox.value()} -query {self.QueryFileName} -db {self.DBFileName.split('.')[0]} -out {self.outputDir}/{os.path.basename(self.QueryFileName).split('.')[0]}_results.txt -max_hsps {self.ui.spinBox_2.value()} -num_alignments {self.ui.spinBox_3.value()} -evalue {self.ui.doubleSpinBox_4.value()} -outfmt "{self.ui.spinBox_5.value()} qseqid sseqid sgi stitle evalue bitscore pident qcovs length mismatch gapopen qstart qend sstart send"'''
             else:
-                blastcmd = f'''{self.ui.comboBox_2.currentText().split(" ")[0]} -num_threads {self.ui.spinBox.value()} -query {self.DBFileName} -db {self.DBFileName.split('.')[0]} -out {self.outputDir}{os.path.basename(self.QueryFileName).split('.')[0]}_results.txt -max_hsps {self.ui.spinBox_2.value()} -num_alignments {self.ui.spinBox_3.value()} -evalue {self.ui.doubleSpinBox_4.value()} -outfmt {self.ui.spinBox_5.value()}'''
+                blastcmd = f'''{self.ui.comboBox_2.currentText().split(" ")[0]} -num_threads {self.ui.spinBox.value()} -query {self.QueryFileName} -db {self.DBFileName.split('.')[0]} -out {self.outputDir}/{os.path.basename(self.QueryFileName).split('.')[0]}_results.txt -max_hsps {self.ui.spinBox_2.value()} -num_alignments {self.ui.spinBox_3.value()} -evalue {self.ui.doubleSpinBox_4.value()} -outfmt {self.ui.spinBox_5.value()}'''
             print(blastcmd)
+            os.system(blastcmd)
             self.ui.textBrowser.append(f"start: {blastcmd}")
             # self.ui.textBrowser.moveCursor(self.textBrowser.textCursor().End)
-            os.system(blastcmd)
         except:
             QtWidgets.QMessageBox.warning(self, "warining", "system errors")
 

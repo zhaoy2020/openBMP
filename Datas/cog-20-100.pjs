@@ -1,0 +1,24 @@
+{
+  "version": "1.2",
+  "dbname": "cog-20-100",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "D:/WorkStation/PyhtonWorkStation/SmallTools/openBMP/Datas/cog-20-100.fa",
+  "number-of-letters": 35923,
+  "number-of-sequences": 50,
+  "last-updated": "2024-03-31T09:08:00",
+  "number-of-volumes": 1,
+  "bytes-total": 1044597,
+  "bytes-to-cache": 36530,
+  "files": [
+    "cog-20-100.pdb",
+    "cog-20-100.phr",
+    "cog-20-100.pin",
+    "cog-20-100.pog",
+    "cog-20-100.pos",
+    "cog-20-100.pot",
+    "cog-20-100.psq",
+    "cog-20-100.ptf",
+    "cog-20-100.pto"
+  ]
+}
