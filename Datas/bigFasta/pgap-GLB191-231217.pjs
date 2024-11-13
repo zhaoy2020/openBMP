@@ -1,0 +1,24 @@
+{
+  "version": "1.2",
+  "dbname": "pgap-GLB191-231217",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "D:/WorkStation/PyhtonWorkStation/SmallTools/openBMP/Datas/bigFasta/pgap-GLB191-231217.faa",
+  "number-of-letters": 1199903,
+  "number-of-sequences": 4070,
+  "last-updated": "2024-04-01T09:18:00",
+  "number-of-volumes": 1,
+  "bytes-total": 2946291,
+  "bytes-to-cache": 1236714,
+  "files": [
+    "pgap-GLB191-231217.pdb",
+    "pgap-GLB191-231217.phr",
+    "pgap-GLB191-231217.pin",
+    "pgap-GLB191-231217.pog",
+    "pgap-GLB191-231217.pos",
+    "pgap-GLB191-231217.pot",
+    "pgap-GLB191-231217.psq",
+    "pgap-GLB191-231217.ptf",
+    "pgap-GLB191-231217.pto"
+  ]
+}

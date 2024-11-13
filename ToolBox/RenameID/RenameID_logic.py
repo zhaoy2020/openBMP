@@ -45,7 +45,7 @@ class QRenameID(QtWidgets.QDialog):
     def on_pushButton_clicked(self):
         try:
             curPath = os.getcwd()
-            self.QueryFileName, flt = QtWidgets.QFileDialog.getOpenFileName(self, "选择Query路径", curPath, "文本文件(*.fasta;*.ffn;*.fnn;*.ffa;*.faa,*.fa);;所有文件(*.*)")
+            self.QueryFileName, flt = QtWidgets.QFileDialog.getOpenFileName(self, "选择Query路径", curPath, "文本文件(*.fasta;*.ffn;*.fnn;*.ffa;*.faa;*.fa);;所有文件(*.*)")
             print(f"导入文件{self.QueryFileName}")
             print(f"文件类型为{flt}")
             self.ui.lineEdit.setText(self.QueryFileName)
@@ -69,28 +69,37 @@ class QRenameID(QtWidgets.QDialog):
             extract_list:要提取的序列列表,dataframe格式
             函数最终返回的的含有SeqRecord类的列表
         '''
-        # print('需提取序列...\n {}'.format(extract_list.values))
+        # db可以存在重复序列，全部提取出来，但是遇到大序列时候比较慢
         store = []  # 临时存放Bio.SeqRecord对象
         num = 0  # 计数
+        success_list = []
         num_no = 0
-        for rec in SeqIO.parse(db_handle, format='fasta'):
-            # for rec_extr in extract_list[0].values:
-            for rec_extr in extract_list:
-                if rec.id == rec_extr:  # 一定要用id，而不是name，虽然内容是一样的，但到SeqIO.write（）时候只能识别id
-                    num = num + 1  # 序号和计数
-                    print('正在提取', rec.name, rec.description, num)
-                    self.ui.textBrowser.append(f"正在提取\t{rec.name}\t{num}")
-                    if rec.seq:  # 判断rec是否为空，不为空则添加到store列表中，表示成功提取
+        END = len( [i for i in SeqIO.parse(db_handle, format='fasta')] )
+
+        for rec_extr in extract_list:
+            counter = 0
+            for rec in SeqIO.parse(db_handle, format='fasta'):
+                counter += 1
+                if rec_extr == rec.id:      # 一定要用id，而不是name，虽然内容是一样的，但到SeqIO.write（）时候只能识别id
+                    print(counter, rec.id)
+                    num += 1           # 序号和计数
+                    print('正在提取', rec.id, rec.description, num)
+                    self.ui.textBrowser.append(f"正在提取\t{rec.id}\t{num}")
+                    if rec.seq:             # 判断rec是否为空，不为空则添加到store列表中，表示成功提取
                         store.append(rec)
-                        print('成功',len(rec.seq),'bp')
+                        success_list.append(rec_extr)
+                        print('成功', len(rec.seq),'bp')
                         self.ui.textBrowser.append(f"成功\t{len(rec.seq)} bp")
                     else:
                         print('序列为空！')
                         self.ui.textBrowser.append(f"序列为空")
                 else:
-                    num_no += 1
-                    print(f'{rec_extr}提取失败\t{num_no}')
-                    self.ui.textBrowser.append(f'{rec_extr}\t提取失败\t{num_no}')
+                    if counter == END:
+                         if rec_extr not in success_list:
+                            print(rec.id)
+                            num_no += 1
+                            print(f'{rec_extr}提取失败\t{num_no}')
+                            self.ui.textBrowser.append(f'{rec_extr}\t提取失败\t{num_no}')
         if store:
             print('提取完成\n')
             self.ui.textBrowser.append(f"提取完成: {num} 成功, {num_no} 失败\t{'='*10}")
@@ -98,7 +107,38 @@ class QRenameID(QtWidgets.QDialog):
             print('无对应序列，提取失败！！！')
             self.ui.textBrowser.append(f"{extract_list}\t无对应序列，提取失败！！！{'='*10}")
         return store
-
+        '''
+        # 忽略db中重复序列，但是遇到大序列时候比较快
+        store = []  # 临时存放Bio.SeqRecord对象
+        num = 0  # 计数
+        num_no = 0
+        db = SeqIO.parse(db_handle, format='fasta')
+        db_id_dic = {rec.id:rec for rec in db}
+        for rec_extr in extract_list:   ### 会忽略db中的重复名称的序列
+            if rec_extr in db_id_dic.keys():
+                num += 1  # 序号和计数
+                print('正在提取', rec_extr, num)
+                self.ui.textBrowser.append(f"正在提取\t{rec_extr}\t{num}")
+                if db_id_dic.get(rec_extr).seq:  # 判断rec是否为空，不为空则添加到store列表中，表示成功提取
+                    store.append(db_id_dic.get(rec_extr))
+                    print('成功',len(db_id_dic.get(rec_extr).seq),'bp')
+                    self.ui.textBrowser.append(f"成功\t{len(db_id_dic.get(rec_extr).seq)} bp")
+                else:
+                    print('序列为空！')
+                    self.ui.textBrowser.append(f"序列为空")
+            else:
+                num_no += 1
+                print(f'{rec_extr}提取失败\t{num_no}')
+                self.ui.textBrowser.append(f'{rec_extr}\t提取失败\t{num_no}')
+        if store:
+            print('提取完成\n')
+            self.ui.textBrowser.append(f"提取完成: {num} 成功, {num_no} 失败\t{'='*10}")
+        else:
+            print('无对应序列，提取失败！！！')
+            self.ui.textBrowser.append(f"{extract_list}\t无对应序列，提取失败！！！{'='*10}")
+        return store
+    '''
+    
     @QtCore.pyqtSlot()
     def on_pushButton_5_clicked(self):
         '''extract'''

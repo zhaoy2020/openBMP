@@ -1,0 +1,24 @@
+{
+  "version": "1.2",
+  "dbname": "query",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "D:/WorkStation/PyhtonWorkStation/SmallTools/openBMP/Datas/bigFasta/query.faa",
+  "number-of-letters": 1199903,
+  "number-of-sequences": 4070,
+  "last-updated": "2024-04-01T14:28:00",
+  "number-of-volumes": 1,
+  "bytes-total": 2946267,
+  "bytes-to-cache": 1236690,
+  "files": [
+    "query.pdb",
+    "query.phr",
+    "query.pin",
+    "query.pog",
+    "query.pos",
+    "query.pot",
+    "query.psq",
+    "query.ptf",
+    "query.pto"
+  ]
+}

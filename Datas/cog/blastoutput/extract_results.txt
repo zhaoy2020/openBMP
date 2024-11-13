@@ -1,0 +1,14 @@
+AAM01497_1	AAM01497_1	0	Glutamate-1-semialdehyde aminotransferase [Methanopyrus kandleri AV19]	0.0	862	100.000	100	430	0	0	1	430	1	430
+AAM01497_1	AAM01497_1	0	Glutamate-1-semialdehyde aminotransferase [Methanopyrus kandleri AV19]	0.0	862	100.000	100	430	0	0	1	430	1	430
+AAM01497_1	AAM01497_1	0	Glutamate-1-semialdehyde aminotransferase [Methanopyrus kandleri AV19]	0.0	862	100.000	100	430	0	0	1	430	1	430
+AAM01497_1	AAM01497_1	0	Glutamate-1-semialdehyde aminotransferase [Methanopyrus kandleri AV19]	0.0	862	100.000	100	430	0	0	1	430	1	430
+AAM01497_1	AAM01497_1	0	Glutamate-1-semialdehyde aminotransferase [Methanopyrus kandleri AV19]	0.0	862	100.000	100	430	0	0	1	430	1	430
+AAM01497_1	AAM01497_1	0	Glutamate-1-semialdehyde aminotransferase [Methanopyrus kandleri AV19]	0.0	862	100.000	100	430	0	0	1	430	1	430
+AAM01497_1	AAM01497_1	0	Glutamate-1-semialdehyde aminotransferase [Methanopyrus kandleri AV19]	0.0	862	100.000	100	430	0	0	1	430	1	430
+AAM01497_1	AAM01497_1	0	Glutamate-1-semialdehyde aminotransferase [Methanopyrus kandleri AV19]	0.0	862	100.000	100	430	0	0	1	430	1	430
+AAM01497_1	AAM01497_1	0	Glutamate-1-semialdehyde aminotransferase [Methanopyrus kandleri AV19]	0.0	862	100.000	100	430	0	0	1	430	1	430
+AAM01497_1	AAM01497_1	0	Glutamate-1-semialdehyde aminotransferase [Methanopyrus kandleri AV19]	0.0	862	100.000	100	430	0	0	1	430	1	430
+AAM01497_1	AAM01497_1	0	Glutamate-1-semialdehyde aminotransferase [Methanopyrus kandleri AV19]	0.0	862	100.000	100	430	0	0	1	430	1	430
+AAM01497_1	AAM01497_1	0	Glutamate-1-semialdehyde aminotransferase [Methanopyrus kandleri AV19]	0.0	862	100.000	100	430	0	0	1	430	1	430
+AAM01497_1	AAM01497_1	0	Glutamate-1-semialdehyde aminotransferase [Methanopyrus kandleri AV19]	0.0	862	100.000	100	430	0	0	1	430	1	430
+AAM01497_1	AAM01497_1	0	Glutamate-1-semialdehyde aminotransferase [Methanopyrus kandleri AV19]	0.0	862	100.000	100	430	0	0	1	430	1	430

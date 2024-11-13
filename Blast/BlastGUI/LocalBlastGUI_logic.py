@@ -134,8 +134,8 @@ class QLocalBlastGUI(QtWidgets.QWidget):
                         -parse_seqids \
                                 -out {self.DBFileName.split('.')[0]}"
             print("start:\n",makeDBcmd)
-            os.system(makeDBcmd)
-            self.ui.textBrowser.append(f"start: {makeDBcmd}")
+            os.system(f'start {makeDBcmd}')
+            # self.ui.textf'start {Browser.a}'ppend(f"start: {makeDBcmd}")
             # self.ui.textBrowser.moveCursor(self.textBrowser.textCursor().End)
         except :
             QtWidgets.QMessageBox.warning(self, "warining", "system errors")
@@ -150,7 +150,8 @@ class QLocalBlastGUI(QtWidgets.QWidget):
             else:
                 blastcmd = f'''{self.ui.comboBox_2.currentText().split(" ")[0]} -num_threads {self.ui.spinBox.value()} -query {self.QueryFileName} -db {self.DBFileName.split('.')[0]} -out {self.outputDir}/{os.path.basename(self.QueryFileName).split('.')[0]}_results.txt -max_hsps {self.ui.spinBox_2.value()} -num_alignments {self.ui.spinBox_3.value()} -evalue {self.ui.doubleSpinBox_4.value()} -outfmt {self.ui.spinBox_5.value()}'''
             print(blastcmd)
-            os.system(blastcmd)
+            # os.system(blastcmd)
+            os.system(f'start {blastcmd}')
             self.ui.textBrowser.append(f"start: {blastcmd}")
             # self.ui.textBrowser.moveCursor(self.textBrowser.textCursor().End)
         except:
